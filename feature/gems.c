@@ -27,10 +27,10 @@ string query_gem_id(string socket, int level)
 
 string query_all_effect(string socket)
 {
-        string msg = gems_color[socket] + "ÕâÊÇÒ»¿Å±¦Ê¯£¬ÉÏÃæËÆºõ¸½×ÅÄ³ÖÖÉñÆæµÄÄ§Á¦£º\n"NOR;
-        msg += sprintf("\t±øÆ÷ - %s\n", weapon_effect[socket]);
-        msg += sprintf("\t·À¾ß - %s\n", armor_effect[socket]);
-        msg += sprintf("\t½äÖ¸ - %s\n", ring_effect[socket]);
+        string msg = gems_color[socket] + "é€™æ˜¯ä¸€é¡†å¯¶çŸ³ï¼Œä¸Šé¢ä¼¼ä¹Žé™„ç€æŸç¨®ç¥žå¥‡çš„é­”åŠ›ï¼š\n"NOR;
+        msg += sprintf("\tå…µå™¨ - %s\n", weapon_effect[socket]);
+        msg += sprintf("\té˜²å…· - %s\n", armor_effect[socket]);
+        msg += sprintf("\tæˆ’æŒ‡ - %s\n", ring_effect[socket]);
         return msg;
 }
 
@@ -49,7 +49,7 @@ void set_weapon_desc()
         if (sockets < 1) return;
 
         if (!stringp(desc)) desc = "";
-        desc += sprintf("ÉÏÃæËÆºõ¿ÉÒÔÏâÇ¶×Å%d¿ÅÄ§·¨Ê¯£¡\n", sockets);
+        desc += sprintf("ä¸Šé¢ä¼¼ä¹Žå¯ä»¥é‘²åµŒç€%dé¡†é­”æ³•çŸ³ï¼\n", sockets);
         for (i = 1; i <= sockets; i++) {
                 socket = query(sprintf("sockets/socket%d", i));
                 level = query(sprintf("sockets/socket%d_level", i));
@@ -73,7 +73,7 @@ void set_armor_desc()
 //
         if (sockets < 1) return;
         if (!stringp(desc)) desc = "";
-        desc += sprintf("ÉÏÃæËÆºõ¿ÉÒÔÏâÇ¶×Å%d¿ÅÄ§·¨Ê¯£¡\n", sockets);
+        desc += sprintf("ä¸Šé¢ä¼¼ä¹Žå¯ä»¥é‘²åµŒç€%dé¡†é­”æ³•çŸ³ï¼\n", sockets);
         for (i = 1; i <= sockets; i++) {
                 socket = query(sprintf("sockets/socket%d", i));
                 level = query(sprintf("sockets/socket%d_level", i));
@@ -99,7 +99,7 @@ void set_ring_desc()
         if (sockets < 1) return;
 
         if (!stringp(desc)) desc = "";
-        desc += sprintf("ÉÏÃæËÆºõ¿ÉÒÔÏâÇ¶×Å%d¿ÅÄ§·¨Ê¯£¡\n", sockets);
+        desc += sprintf("ä¸Šé¢ä¼¼ä¹Žå¯ä»¥é‘²åµŒç€%dé¡†é­”æ³•çŸ³ï¼\n", sockets);
         for (i = 1; i <= sockets; i++) {
                 socket = query(sprintf("sockets/socket%d", i));
                 level = query(sprintf("sockets/socket%d_level", i));

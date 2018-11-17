@@ -10,7 +10,7 @@
 inherit F_CLEAN_UP;
 
 string help = @HELP
-        ±ê×¼ mudlist Ö¸Áî¡£
+        æ¨™æº– mudlist æŒ‡ä»¤ã€‚
 HELP;
 
 int online;
@@ -26,11 +26,11 @@ string cstatus(int status, string color)
 
         if( status & ONLINE)
         {
-                str+=HIW"Á¬Ïß"NOR;
+                str+=HIW"é€£ç·š"NOR;
                 online++;
         }
-        if( status&SHUTDOWN)    str+=YEL"¹Ø±Õ"NOR;
-        if( status&DISCONNECT)  str+=WHT"¶ÏÏß"NOR;
+        if( status&SHUTDOWN)    str+=YEL"é—œé–‰"NOR;
+        if( status&DISCONNECT)  str+=WHT"æ–·ç·š"NOR;
         str += color;
 
         return sprintf("%-18s",str);
@@ -46,7 +46,7 @@ int main(object me, string arg)
         mixed c=({}),v=({});
 
         if( !i2=find_object(INTERMUD2_D) )
-                return tell(me, "ÍøÂ·¾«Áé²¢Ã»ÓÐ±»ÔØÈë¡£\n", CMDMSG);
+                return tell(me, "ç¶²è·¯ç²¾éˆä¸¦æ²’æœ‰è¢«è¼‰å…¥ã€‚\n", CMDMSG);
 
         if( arg )
         {
@@ -82,9 +82,9 @@ int main(object me, string arg)
         v=keys(x);
         v = sort_array(v,1);
 
-        str+="¡õINTERMUD_2 MUDLIST\n\n"HIY"Cf"NOR"-ÏµÍ³³É¹¦×Ô¶¯ÅÐ¶Ï±àÂëÀàÐÍ\n"HIG"GB"NOR"-È·ÈÏÎªGB±àÂë\n"HIR"AD"NOR"-È·ÈÏÓÐ´óÁ¿¹ã¸æÑ¶Ï¢\n"HIB"Ig"NOR"-¸ô¾øÑ¶Ï¢\n\n";
-        str+=sprintf("ÏÖÔÚÊ±¿Ì£º%s\n\n¡õÈ·¶¨³£×¤ÁÐ±í\n%-:20s%-26s%16s%5s %18s %-16s\n",TIME_D->replace_ctime(time()),"Ãû³Æ","ÖÐÎÄÃû³Æ(ÏßÉÏÈËÊý)","IP Î»Ö·","²º","×´Ì¬","×îºó½Ó´¥");
-        str+=repeat_string("©¤",53)+"\n";
+        str+="â–¡INTERMUD_2 MUDLIST\n\n"HIY"Cf"NOR"-ç³»çµ±æˆåŠŸè‡ªå‹•åˆ¤æ–·ç·¨ç¢¼é¡žåž‹\n"HIG"GB"NOR"-ç¢ºèªç‚ºGBç·¨ç¢¼\n"HIR"AD"NOR"-ç¢ºèªæœ‰å¤§é‡å»£å‘Šè¨Šæ¯\n"HIB"Ig"NOR"-éš”çµ•è¨Šæ¯\n\n";
+        str+=sprintf("ç¾åœ¨æ™‚åˆ»ï¼š%s\n\nâ–¡ç¢ºå®šå¸¸é§åˆ—è¡¨\n%-:20s%-26s%16s%5s %18s %-16s\n",TIME_D->replace_ctime(time()),"åç¨±","ä¸­æ–‡åç¨±(ç·šä¸Šäººæ•¸)","IP ä½å€","åŸ ","ç‹€æ…‹","æœ€å¾ŒæŽ¥è§¸");
+        str+=repeat_string("â”€",53)+"\n";
         foreach(t in c)
         {
 //              shout(sprintf("%s       \n",t));
@@ -129,12 +129,12 @@ int main(object me, string arg)
 
         }
 
-        str+=repeat_string("©¤",53)+"\n¹² "+sizeof(mudlist)+" ±Ê×ÊÁÏ£¬ÓÐ "+online+" ¸ö Mud Á¬ÏßÖÐ¡£\n\n¡õµÈ´ýÈ·ÈÏÁÐ±í\n";
-        str+=sprintf("%-:20s%-26s%16s%5s %18s %-16s\n","Ãû³Æ","ÖÐÎÄÃû³Æ(ÏßÉÏÈËÊý)","IP Î»ÖÃ","²º","»ØÓ¦","×îºó½Ó´¥");
-        str+=repeat_string("©¤",53)+"\n";
+        str+=repeat_string("â”€",53)+"\nå…± "+sizeof(mudlist)+" ç­†è³‡æ–™ï¼Œæœ‰ "+online+" å€‹ Mud é€£ç·šä¸­ã€‚\n\nâ–¡ç­‰å¾…ç¢ºèªåˆ—è¡¨\n";
+        str+=sprintf("%-:20s%-26s%16s%5s %18s %-16s\n","åç¨±","ä¸­æ–‡åç¨±(ç·šä¸Šäººæ•¸)","IP ä½ç½®","åŸ ","å›žæ‡‰","æœ€å¾ŒæŽ¥è§¸");
+        str+=repeat_string("â”€",53)+"\n";
         foreach(t in v)
         str+=sprintf("%-:20s%-26s%16s%5s %18d %-16s\n",t,(incoming_mudlist[x[t]]["MUDNAME"]||"")+NOR+(incoming_mudlist[x[t]]["USERS"]?"("+incoming_mudlist[x[t]]["USERS"]+")":""),incoming_mudlist[x[t]]["HOSTADDRESS"],incoming_mudlist[x[t]]["PORT"]+"",incoming_mudlist[x[t]]["CONNECTION"],TIME_D->replace_ctime(incoming_mudlist[x[t]]["LASTESTCONTACT"]));
-        str+=repeat_string("©¤",53)+"\n¹² "+sizeof(incoming_mudlist)+" ±Ê×ÊÁÏ£¬ÏÂ´Î×ÊÑ¶¸üÐÂ:"+TIME_D->replace_ctime(fetch_variable("refresh_limit",i2)+REFRESH_INCOMING_TIME)+"\n\n×Ü¼Æ¹² "+sizeof(mudlist+incoming_mudlist)+" ¸ö Mud ¡£\n";
+        str+=repeat_string("â”€",53)+"\nå…± "+sizeof(incoming_mudlist)+" ç­†è³‡æ–™ï¼Œä¸‹æ¬¡è³‡è¨Šæ›´æ–°:"+TIME_D->replace_ctime(fetch_variable("refresh_limit",i2)+REFRESH_INCOMING_TIME)+"\n\nç¸½è¨ˆå…± "+sizeof(mudlist+incoming_mudlist)+" å€‹ Mud ã€‚\n";
 
         online=0;
 

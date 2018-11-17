@@ -2,11 +2,11 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "��У��");
+        set("short", "大校場");
         set("long", @LONG
-����������У�ľ�ʿ�ĵط���ֻ��У������ΡΡ����һ����̨��̨��
-������ǧ�������Ӱ�ʡ�̨ǰ����������ˣ���˶��ϻ�����˶����춷��
-У����ۼ����������ٱ����佫���������ｫҪ�����ı�ʽ��
+這裡是用來校閱軍士的地方。只見校場正中巍巍搭着一座高台，台南
+排列着千餘張椅子板凳。台前豎著兩根旗杆，旗杆頂上還有着碩大的旗斗。
+校場里聚集着數百名官兵和武將，看來這裡將要進行閱兵式。
 LONG);
         set("outdoors", "luoyang");
         set("no_clean_up", 0);

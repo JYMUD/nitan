@@ -2,23 +2,23 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "µ±ÆÌ");
+        set("short", "ç•¶é‹ª");
         set("long", @LONG
-ÕâÊÇÒ»¼Ò×øÂäÔÚ¾©³ÇÍõ¸®¾®´ó½ÖÎ÷±ßµÄµ±ÆÌ¡£Õâ¼Òµ±ÆÌ¹æÄ£²»´ó£¬
-µ«ÊÇËØÀ´ÒÔÂòÂô¹«Æ½Öø³Æ£¬¾©³ÇµÄ°ÙÐÕÓöÊÖ½ôµÄÇé¿öÊ±£¬¶¼»á°Ñ¶«Î÷
-ÄÃµ½ÕâÀïÀ´µäµ±¡£Ò»¸öÎå³ß¸ßµÄÄ¾ÖÆ¹ñÌ¨µ²ÔÚÄãµÄÃæÇ°£¬¹ñÌ¨ÉÏ°Ú×Å
-Ò»¸öÅÆ×Ó (paizi)£¬¹ñÌ¨ºó×ø×Åµ±ÆÌµÄÀÏ°å£¬Ò»Ë«¾«Ã÷µÄÑÛ¾¦ÉÏÉÏÏÂ
-ÏÂ´òÁ¿×ÅÄã¡£
+é€™æ˜¯ä¸€å®¶åè½åœ¨äº¬åŸŽçŽ‹åºœäº•å¤§è¡—è¥¿é‚Šçš„ç•¶é‹ªã€‚é€™å®¶ç•¶é‹ªè¦æ¨¡ä¸å¤§ï¼Œ
+ä½†æ˜¯ç´ ä¾†ä»¥è²·è³£å…¬å¹³è‘—ç¨±ï¼Œäº¬åŸŽçš„ç™¾å§“é‡æ‰‹ç·Šçš„æƒ…æ³æ™‚ï¼Œéƒ½æœƒæŠŠæ±è¥¿
+æ‹¿åˆ°é€™è£¡ä¾†å…¸ç•¶ã€‚ä¸€å€‹äº”å°ºé«˜çš„æœ¨è£½æ«ƒæª¯æ“‹åœ¨ä½ çš„é¢å‰ï¼Œæ«ƒæª¯ä¸Šæ“ºç€
+ä¸€å€‹ç‰Œå­ (paizi)ï¼Œæ«ƒæª¯å¾Œåç€ç•¶é‹ªçš„è€é—†ï¼Œä¸€é›™ç²¾æ˜Žçš„çœ¼ç›ä¸Šä¸Šä¸‹
+ä¸‹æ‰“é‡ç€ä½ ã€‚
 LONG );
         set("no_fight", 1);
         set("no_beg",1);
         set("item_desc", ([
-                "paizi" : "¹«Æ½½»Ò×\n
-sell        Âô 
-buy         Âò
-pawn        µ±
-expiate     Êê
-value       ¹À¼Û
+                "paizi" : "å…¬å¹³äº¤æ˜“\n
+sell        è³£ 
+buy         è²·
+pawn        ç•¶
+expiate     è´–
+value       ä¼°åƒ¹
 ",
         ]));
 

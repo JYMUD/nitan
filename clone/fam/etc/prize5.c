@@ -3,13 +3,13 @@ inherit ITEM;
 
 void create()
 {
-        set_name(HIR "ÉñÊ¥ÑªÇå" NOR, ({ "god blood", "god", "blood" }));
+        set_name(HIR "ç¥žè–è¡€æ¸…" NOR, ({ "god blood", "god", "blood" }));
         set_weight(1000);
         if (clonep())
                 set_default_object(__FILE__);
         else {
-                set("long", HIR "ß@ÊÇÒ»Æ¿ÉñÊ¥ÑªÇå£¬ËÆºõ¿ÉÒÔï‹ÓÃ¡£\n" NOR);
-                set("unit", "Æ¿");
+                set("long", HIR "æ˜¯ä¸€ç“¶ç¥žè–è¡€æ¸…ï¼Œä¼¼ä¹Žå¯ä»¥ç”¨ã€‚\n" NOR);
+                set("unit", "ç“¶");
                 set("value", 300000);
         }
         setup();
@@ -32,24 +32,24 @@ int do_drink(string arg)
         un = query("unit");
 
         if (! arg || ! id(arg))
-                return notify_fail("ÄãÒªºÈÊ²Ã´¶«Î÷£¿\n");
+                return notify_fail("ä½ è¦å–ä»€éº¼æ±è¥¿ï¼Ÿ\n");
 
         if (me->is_busy())
-                return notify_fail("¼±Ê²Ã´£¬Ð¡ÐÄ±ðÒ­×ÅÁË¡£\n");
+                return notify_fail("æ€¥ä»€éº¼ï¼Œå°å¿ƒåˆ¥å™Žç€äº†ã€‚\n");
 
         my = me->query_entire_dbase();
 
         if( time()-query_temp("last_eat/blood", me)<1800 )
         {
-                write("Äã¸Õ·þÓÃ¹ýÒ©£¬ÐèÒ©ÐÔ·¢»ÓÍêÐ§ÓÃÒÔºó²ÅÄÜ¼ÌÐø·þÓÃ¡£\n");
+                write("ä½ å‰›æœç”¨éŽè‘¯ï¼Œéœ€è—¥æ€§ç™¼æ®å®Œæ•ˆç”¨ä»¥å¾Œæ‰èƒ½ç¹¼çºŒæœç”¨ã€‚\n");
                 return 1;
         }
 
         set_temp("last_eat/blood", time(), me);
 
 
-        message_vision(HIY "$N" HIY "Ò»Ñö²±£¬½«Ò»Õû" + un + na +
-                       HIY "ÒûÏÂ£¬ÔÙÒ²¸Ð¾õ²»µ½ÈÎºÎÆ£±¹¡£\n" NOR, me);
+        message_vision(HIY "$N" HIY "ä¸€ä»°è„–ï¼Œå°‡ä¸€æ•´" + un + na +
+                       HIY "é£²ä¸‹ï¼Œå†ä¹Ÿæ„Ÿè¦ºä¸åˆ°ä»»ä½•ç–²æ†Šã€‚\n" NOR, me);
 
         my["jing"]     = my["max_jing"];
         my["qi"]       = my["max_qi"];

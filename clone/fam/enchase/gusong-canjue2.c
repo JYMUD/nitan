@@ -3,19 +3,19 @@ inherit ITEM;
 
 void create()
 {
-        set_name(NOR + YEL "¹ÅËÉ²Ğïã" NOR, ({"gusong canjue", "gusong", "canjue"}));
+        set_name(NOR + YEL "å¤æ¾æ®˜é’" NOR, ({"gusong canjue", "gusong", "canjue"}));
         set_weight(2000);
-        set("long", NOR + YEL "¿´ËÆÆÕÍ¨µÄÓñÊ¯£¬È´ÔÌ²Ø×ÅÆæÒìµÄÄÜÁ¿¡£\n" NOR);
+        set("long", NOR + YEL "çœ‹ä¼¼æ™®é€šçš„ç‰çŸ³ï¼Œå»è˜Šè—ç€å¥‡ç•°çš„èƒ½é‡ã€‚\n" NOR);
         if (clonep())
                 set_default_object(__FILE__);
         else {
-                set("unit", "¿Å");
+                set("unit", "é¡†");
                 set("value", 500000);
-                set("enchase/name", "¹ÅËÉ²Ğïã");
+                set("enchase/name", "å¤æ¾æ®˜é’");
                 set("enchase/point", 7);
                 set("enchase/type", "medal2");
                 set("enchase/cur_firm", 100);
-                set("nine_object", 1); // ¾Å¿×ÏâÇ¶ÎïÆ·±ê¼Ç
+                set("nine_object", 1); // ä¹å­”é‘²åµŒç‰©å“æ¨™è¨˜
                 set("enchase/spe_data", ([]) );  
         }
         setup();

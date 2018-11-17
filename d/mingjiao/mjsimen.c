@@ -6,11 +6,11 @@ inherit ROOM;
 
 void create()
 {
-    set("short", "��ʯ��");
+    set("short", "青石道");
         set("long", @LONG
-����һƬС���֣���ǰ������һ�������ʯ�������ֱͨ��ǰ����
-�ص�ϡϡ��������ż��ð�����ȴ�Եøߴ�ͦ�Σ��������֦������
-�ո߸���չ�š�
+穿過一片小松林，面前出現了一條寬廣的石板道，筆直通向前方。
+沿道稀稀落落地種着幾棵柏樹，卻顯得高大挺拔，蝤龍般的枝幹向天
+空高高伸展着。
 LONG );
     set("exits", ([
         "north" : __DIR__"tomen2",

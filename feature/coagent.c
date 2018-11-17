@@ -18,20 +18,20 @@ int start_help(object env, object helper, object ob)
                 if( this_object()->is_killing(ob->query("id")) )
                         return 1;
 
-                message_vision(HIW + "$NÀäĞ¦²»Ö¹£º¡°ºÃ¸ö" +
-                               RANK_D->query_rude(ob) + "£¡ÄãÒ²À´ÌíÂÒ£¿¡±\n",
+                message_vision(HIW + "$Nå†·ç¬‘ä¸æ­¢ï¼šâ€œå¥½å€‹" +
+                               RANK_D->query_rude(ob) + "ï¼ä½ ä¹Ÿä¾†æ·»äº‚ï¼Ÿâ€\n",
                                me);
         } else {
                 if( helping || me->is_fighting() )
                         return 0;
 
-                message_vision(HIC + me->name() + "Î¢Î¢Ò»ã¶£¬ËÆºõÌıµ½ÁËÊ²Ã´£¬"
-                               "Ë«×ãÒ»µã£¬ÆËÁË³öÈ¥¡£\n" NOR, me);
+                message_vision(HIC + me->name() + "å¾®å¾®ä¸€æ„£ï¼Œä¼¼ä¹è½åˆ°äº†ä»€éº¼ï¼Œ"
+                               "é›™è¶³ä¸€é»ï¼Œæ’²äº†å‡ºå»ã€‚\n" NOR, me);
 
                 me->move(env);
                 if( objectp(helper) ) {
-                        message_vision(random(2) ? HIW + "$N¸ßÉùÓ¦µÀ£º¡°$n£¡²»±Ø¾ª»Å£¬ÎÒ$NÀ´ÁË£¡¡±\n" NOR :
-                                                   HIW + "$NÒ»Éù³¤Ò÷£º¡°ÇÒÂı£¬»¹ÓĞÎÒ$NÄØ£¬½ÓÕĞ£¡¡±\n",
+                        message_vision(random(2) ? HIW + "$Né«˜è²æ‡‰é“ï¼šâ€œ$nï¼ä¸å¿…é©šæ…Œï¼Œæˆ‘$Nä¾†äº†ï¼â€\n" NOR :
+                                                   HIW + "$Nä¸€è²é•·åŸï¼šâ€œä¸”æ…¢ï¼Œé‚„æœ‰æˆ‘$Nå‘¢ï¼Œæ¥æ‹›ï¼â€\n",
                                        me, helper);
                 }
         }
@@ -55,10 +55,10 @@ void finish_help()
                 return;
 
         if( base_name(environment()) != startroom ) {
-                message_vision("$N¿´ÁË¿´ËÄÖÜ£¬´Ò´ÒµØÀë¿ªÁË¡£\n", me);
+                message_vision("$Nçœ‹äº†çœ‹å››å‘¨ï¼ŒåŒ†åŒ†åœ°é›¢é–‹äº†ã€‚\n", me);
                 me->move(startroom);
-                message_vision("$N´Ò´ÒµØ¸ÏÁË¹ıÀ´£¬ÅÄÁËÅÄ³¾ÍÁ£¬·Â·ğÊ²Ã´"
-                               "¶¼Ã»ÓĞ·¢ÉúËÆµÄ¡£\n", me);
+                message_vision("$NåŒ†åŒ†åœ°è¶•äº†éä¾†ï¼Œæ‹äº†æ‹å¡µåœŸï¼Œå½·å½¿ä»€éº¼"
+                               "éƒ½æ²’æœ‰ç™¼ç”Ÿä¼¼çš„ã€‚\n", me);
         }
 
         helping = 0;

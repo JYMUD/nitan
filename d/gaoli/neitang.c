@@ -1,13 +1,13 @@
 // /d/gaoli/xingguan
-// Room in ¸ßÀö
+// Room in é«˜éº—
 inherit ROOM;
 void create()        
 {
-        set("short", "ÄÚÌÃ");
+        set("short", "å…§å ‚");
         set("long", @LONG
-ÕâÀïÊÇÎäÊ¿ÐÐ¹ÝµÄÄÚÌÃ£¬Áº¼äÓÐÒ»¿éØÒ£¬ÉÏÐ´×ÅÒ»¸ö´ó´óµÄ¡¸Îä¡¹
-×Ö£¬ÌÃÉÏ²¼ÖÃËàÄÂ£¬Á½±ÚÐü×Å³¤½££¬Ñüµ¶¡£µØÏÂÃ»ÓÐ×ÀÒÎ£¬µØÉÏ·Å×Å¼¸
-¸öÆÑÍÅ¡£
+é€™è£¡æ˜¯æ­¦å£«è¡Œé¤¨çš„å…§å ‚ï¼Œæ¢é–“æœ‰ä¸€å¡ŠåŒ¾ï¼Œä¸Šå¯«ç€ä¸€å€‹å¤§å¤§çš„ã€Œæ­¦ã€
+å­—ï¼Œå ‚ä¸Šå¸ƒç½®è‚…ç©†ï¼Œå…©å£æ‡¸ç€é•·åŠï¼Œè…°åˆ€ã€‚åœ°ä¸‹æ²’æœ‰æ¡Œæ¤…ï¼Œåœ°ä¸Šæ”¾ç€å¹¾
+å€‹è’²åœ˜ã€‚
 LONG);
 set("exits", ([
                 "out":__DIR__"xingguan"

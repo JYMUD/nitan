@@ -1,4 +1,4 @@
-//houroad1.c                ËÄ´¨ÌÆÃÅ¡ªÇàÊ¯Ğ¡Â·
+//houroad1.c                å››å·å”é–€â€•é’çŸ³å°è·¯
 
 #include <ansi.h>
 #include <room.h>
@@ -6,11 +6,11 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "ÇàÊ¯Ğ¡Â·");
+        set("short", "é’çŸ³å°è·¯");
         set("long",
-"ÕâÀïÊÇºóÕ¬Î÷²àµÄÇàÊ¯Ğ¡Â·¡£ÒşÒşµÄ¿ÉÒÔÌıµ½Ô¶´¦´«À´Çå´àµÄÁ÷Ë®Éù\n"
-"£¬Õ¹Ä¿ÍûÈ¥ÒÑ¾­¿ÉÒÔ¿´¼ûÔÚ·çÖĞÒ¡°ÚµÄÆ¬Æ¬ºÉÒ¶¡£Ò»ÕóÇå·ç´µ¹ı´øÀ´Ò»¹É\n"
-"ºÉ»¨ÇåÏã¡£\n"
+"é€™è£¡æ˜¯å¾Œå®…è¥¿å´çš„é’çŸ³å°è·¯ã€‚éš±éš±çš„å¯ä»¥è½åˆ°é è™•å‚³ä¾†æ¸…è„†çš„æµæ°´è²\n"
+"ï¼Œå±•ç›®æœ›å»å·²ç¶“å¯ä»¥çœ‹è¦‹åœ¨é¢¨ä¸­æ–æ“ºçš„ç‰‡ç‰‡è·è‘‰ã€‚ä¸€é™£æ¸…é¢¨å¹éå¸¶ä¾†ä¸€è‚¡\n"
+"è·èŠ±æ¸…é¦™ã€‚\n"
 );
         set("exits", ([
                         "west" : __DIR__"houroad2",
@@ -29,19 +29,19 @@ void create()
 int valid_leave(object me, string dir)
 {
         if ( ( (dir == "north") || (dir == "west") )&& 
-                (query("family/family_name", me) != "ÌÆÃÅÊÀ¼Ò") && 
+                (query("family/family_name", me) != "å”é–€ä¸–å®¶") && 
                 !wizardp(me) && (objectp( present("jia ding", environment(me)) ) ))
-                return notify_fail("¼Ò¶¡Ò»ÉìÊÖ£¬ËµµÀ£º¡°Äã²»ÊÇÌÆÃÅÖĞÈË£¬²»ÄÜÔÙÏòÇ°×ßÁË£¡¡±\n");
+                return notify_fail("å®¶ä¸ä¸€ä¼¸æ‰‹ï¼Œèªªé“ï¼šâ€œä½ ä¸æ˜¯å”é–€ä¸­äººï¼Œä¸èƒ½å†å‘å‰èµ°äº†ï¼â€\n");
 
         if ( ((dir == "north") || (dir == "west")) && !wizardp(me) && 
                 (objectp( present("jia ding", environment(me)) ) ) && 
                 !query_temp("tangmen", me) )
-                return notify_fail("¼Ò¶¡Ò»¹§Éí£¬ËµµÀ£º¡°Ã»ÓĞÈÎÎñÄãÊÇ²»ÄÜ½øÈëÕâÀïµÄ£¡¡±\n");
+                return notify_fail("å®¶ä¸ä¸€æ­èº«ï¼Œèªªé“ï¼šâ€œæ²’æœ‰ä»»å‹™ä½ æ˜¯ä¸èƒ½é€²å…¥é€™è£¡çš„ï¼â€\n");
 
         if ( (dir == "north") && !wizardp(me) && 
                 (objectp( present("jia ding", environment(me)) ) ) && 
                 !query_temp("yao", me) )
-                return notify_fail("¼Ò¶¡Ò»¹§Éí£¬ËµµÀ£º¡°Ã»ÓĞÈÎÎñÄãÊÇ²»ÄÜ½øÈëÒ©ÆÔµÄ£¡¡±\n");
+                return notify_fail("å®¶ä¸ä¸€æ­èº«ï¼Œèªªé“ï¼šâ€œæ²’æœ‰ä»»å‹™ä½ æ˜¯ä¸èƒ½é€²å…¥è‘¯åœƒçš„ï¼â€\n");
 
                 return ::valid_leave(me, dir);
 }

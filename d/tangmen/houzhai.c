@@ -1,4 +1,4 @@
-//houzhai.c                ÌÆÃÅÊÀ¼Ò¡ª×ßÀÈ
+//houzhai.c                å”é–€ä¸–å®¶â€•èµ°å»Š
 
 #include <ansi.h>
 #include <room.h>
@@ -6,18 +6,18 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "ºóÕ¬");
+        set("short", "å¾Œå®…");
         set("long",
-"ÕâÀïÊÇÁ«ÔÆ¸óºóÕ¬¡£´ÓÕâÀïÏò±±¾ÍÊÇÌÆÃÅµÄ´ú±íÌÆÀÏÌ«Ì«µÄÇŞÊÒ¾İÎÅ\n"
-"ÍâÈËÒª¼ûµ½ÌÆÀÏÌ«Ì«ÊÆ±ÈµÇÌì»¹ÄÑ£¬´ÓÕâÀïÏò¶«ÊÇÒ»¼ä²ñ·¿£¬ÏòÎ÷ÊÇÍ¨Ïò\n"
-"ºóÔºµÄĞ¡Â·¡£\n"
+"é€™è£¡æ˜¯è“®é›²é–£å¾Œå®…ã€‚å¾é€™è£¡å‘åŒ—å°±æ˜¯å”é–€çš„ä»£è¡¨å”è€å¤ªå¤ªçš„å¯¢å®¤æ“šè\n"
+"å¤–äººè¦è¦‹åˆ°å”è€å¤ªå¤ªå‹¢æ¯”ç™»å¤©é‚„é›£ï¼Œå¾é€™è£¡å‘æ±æ˜¯ä¸€é–“æŸ´æˆ¿ï¼Œå‘è¥¿æ˜¯é€šå‘\n"
+"å¾Œé™¢çš„å°è·¯ã€‚\n"
 );
         set("exits", ([
                         "north" : __DIR__"nzlang2",
                         "south" : __DIR__"dating",
                         "southwest" : __DIR__"chaifang",
         ]));
-        create_door("southwest","Ä¾ÃÅ","northeast",DOOR_CLOSED);
+        create_door("southwest","æœ¨é–€","northeast",DOOR_CLOSED);
         set("objects", ([
                 __DIR__"npc/tangkan" : 1,
         ]));
@@ -28,8 +28,8 @@ void create()
 
 int valid_leave(object me, string dir)
 {
-        if( (dir == "north") && (query("family/family_name", me) != "ÌÆÃÅÊÀ¼Ò") )
-                return notify_fail("Äã²»ÊÇÌÆÃÅÖĞÈË£¬²»ÄÜÔÙÏòÇ°×ßÁË£¡\n");
+        if( (dir == "north") && (query("family/family_name", me) != "å”é–€ä¸–å®¶") )
+                return notify_fail("ä½ ä¸æ˜¯å”é–€ä¸­äººï¼Œä¸èƒ½å†å‘å‰èµ°äº†ï¼\n");
 
         return ::valid_leave(me, dir);
 }

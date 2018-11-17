@@ -1,11 +1,11 @@
 #include <weapon.h>
 #include <ansi.h>
 
-#define RAGE "¡¸" HIR "ñRÀ­ñTÖ®Å­" NOR "¡¹"
-#define RAGEC "¡¸" HIR "ñRÀ­ñTÖ®Å­" NOR
+#define RAGE "ã€Œ" HIR "æ‹‰ä¹‹æ€’" NOR "ã€"
+#define RAGEC "ã€Œ" HIR "æ‹‰ä¹‹æ€’" NOR
 
-#define SHIELD "¡¸" HIB "ÂåÉ½ß_¸ßµÈ×o¶Ü" NOR "¡¹"
-#define SHIELDC "¡¸" HIB "ÂåÉ½ß_¸ßµÈ×o¶Ü" NOR
+#define SHIELD "ã€Œ" HIB "æ´›å±±é«˜ç­‰ç›¾" NOR "ã€"
+#define SHIELDC "ã€Œ" HIB "æ´›å±±é«˜ç­‰ç›¾" NOR
 
 string look_sword();
 void remove_effect(object me, int amount);
@@ -14,16 +14,16 @@ inherit SWORD;
 
 void create()
 {
-        set_name(HIY "ÉñÂ}éL„¦" NOR, ({ "long sword", "sword" }));
+        set_name(HIY "ç¥ž" NOR, ({ "long sword", "sword" }));
         set_weight(1000);
         if (clonep())
                 destruct(this_object());
         else {
-                set("unit", "±ú");
+                set("unit", "æŸ„");
                 set("no_sell", 1);
                 set("long", (: look_sword :));
                 set("value", 2000000);
-                set("no_sell", "Oh£¡My god£¡");
+                set("no_sell", "Ohï¼My godï¼");
                 set("material", "???");
                 set("stable", 100);
         }
@@ -40,47 +40,47 @@ string look_sword()
 {
         return HIY
         "\n"
-        "ÉñÂ}éL„¦+5£º¡¸" HIR "ÖTÉñµÄÐúÖœ" HIY "¡¹\n\n"
-        "ß@°ÑéL„¦³ýÁË±ú¶ËÓÉ°×ãyËùèTÍâ£¬Õû‚€„¦ÉíÆáºÚ£¬ŸoähŸoÈÐ£¬±ãËÆ±¡\n"
-        "èFÆ¬°ã¡£µ«ÊÇ®”ÄãµÄÖ¸¼âÓ|Åöµ½„¦Éí•r£¬ÄÜ¸Ðµ½Ò»½z´Ì¹ÇµÄ±ù›ö£¬ß@\n"
-        "•rÉõÖÁ•þ°lÓXËüÊÇÓÐÐÄÌøµÄ¡£ÖTÉñµÄÐúÖœèTÔìì¶1039 DR £¬èTÔìÕßÊÇ\n"
-        "Û –¼ªµÂµÄÒ»Î»¸ßëAÄÁŽŸ£¬®”•rÛ –¼ªµÂÊÜµ½°ë«FÈËµÄ‡ú½ËéLß_ÈýÄê\n"
-        "Ö®¾Ã£¬ÔËÝ”ÎïÙYµÄµÀÂ·±»ÇÐ”à£¬‘ðÊ¿ºÍÈË‚ƒÓÉì¶éLÆÚµÃ²»µ½Ña½o£¬´ó\n"
-        "¶¼Ê¿šâµÍÂä£¬¶øË¹ÂåËþÉñRµÄÄÁŽŸÔÚ‘ðÒÛÖÐ…s“úÈÎÁË¾ÈÔ®ºÍát¯ŸµÄ¹¤\n"
-        "×÷£¬Í¬•rÄÁŽŸ‚ƒÒ²ÔÚ²»Í£µØÏòÖTÉñÆíµ»£¬ÒÔÇó±£ÓÓÆ½°²¡£±M¹ÜÈË‚ƒò¯\n"
-        "³ÏµÄÐÅ·îÖøÖTÉñ£¬µÈ´ýÉÏÌì½oÅcŽÍÖú£¬µ«Û –¼ªµÂÈÔì¶1042 DR ±»°ë\n"
-        "«FÈË¹¥×£¬Í¬•rË¹ÂåËþÉñR³ÉÁËÒ»Æ¬UÐæ£¬ß@°Ñ„¦Ò²²»ÖªËùÛ™¡£\n\n"
-        "ºÚ‚Ü¿Ë¡¤„Ú‚Ë¹ÊÇÒ»Î»‰™ÂäµÄÂ}ÎäÊ¿£¬ÔÚÈö¶¡†³ÇËØÒÔÀä¿áºÍÓÂÃÍÖø\n"
-        "·Q£¬ÈË‚ƒ·QËûÊÇ¡¸ëpÈÐÊÖ¡¹£¬…s²»ÖªËûµÄºÜ´óÒ»²¿·ÖÄÜÁ¦ÊÇí×Ôì¶Ëû\n"
-        "µÄÅä„¦¡£Ò»´ÎÔÚÈö¶¡†³ÇµÄ¾Æ°ÉÖÐ£¬Ò»Î»ºÈ×íµÄ°«ÈË±IÔô²»MËûµÄ·Q\n"
-        "Ì–£¬ÏòËû°l³öÁËÌô‘ð¡£ëmÈ»ºÚ‚Ü¿Ë¡¤„Ú‚Ë¹Ó¢ÓÂÉÆ‘ð£¬Ò²ÊÖÈÐÁËß@Î»\n"
-        "¿ñÍýµÄ°«ÈË±IÔô£¬µ«ËûÈÔÈ»”³²»ß^Ç°íŽÍÃ¦µÄ´óÈº¼tÎäÊ¿¼¯ˆFµÄ¹ÍÓ¶\n"
-        "±ø£¬±»·Ö³ÉÁËÆß‰K¡£¶øß@°Ñ„¦Ò²±»Ó¶±øî^îI®”×÷‘ðÀûÆ·È¡×ß¡£\n\n" NOR
-        "”µ“þÙYÁÏ£º\n"
-        "‚ûº¦Á¦£º" WHT "1d10+5£¬Œ¦ÉÆÁ¼»òÊÇÐ°ºê‡ IµÄ”³ÈË•r«@µÃ+10¸ÄÉÆ\n" NOR
-        "Áã¼‰ÃüÖÐÖµ£º" WHT "«@µÃ+7¸ÄÉÆ\n" NOR
-        "‚ûº¦îÐÍ£º" WHT "“]¿³\n" NOR
-        "¿¹Á¦¼ÓÖµ£º\n" WHT
-        "  +15%Ä§·¨¿¹Á¦\n"
-        "  +50%º®Àä¿¹Á¦\n"
-        "  Œ¦‡ŠÍÂ¹¥“ôµÄ»íÃâÂÊ™z¶¨+10ÓÐÀû\n" NOR
-        "ÌØÊâ¹¦ÄÜ£º\n" WHT
-        "  Ã¿ÌìÊ©Õ¹Ò»´ÎñRÀ­ñTÖ®Å­\n"
-        "  Ã¿ÌìÊ©Õ¹ƒÉ´ÎÂåÉ½ß_¸ßµÈ×o¶Ü\n"
-        "  Ã¿ÌìÊ©Õ¹Èý´ÎÓ¢ÐÛšâ¸Å\n"
-        "  ³ÖÓÃÕßŒ¦ËÀÍöÒ»Ö¸/ÂÉÁî£ºËÀÍö/¿ñ±©÷È»ó/¿Ö‘ÖÖ®ÅÛ/ŸoÖú·¨Ó¡ÃâÒß\n"
-        "  “ôÖÐÄ¿˜ËááÓÐ15%™C•þŒ¢Ä¿˜ËÕð»è£¬ ‘•r10Ý†\n"
-        "  “ôÖÐÄ¿˜ËááÓÐ50%™C•þÒÔ³ÖÓÃÕßžéÖÐÐÄ°l³öÒ»‚€3d6µÄ»ðÇò\n" NOR
-        "ÖØÁ¿£º" WHT "10\n" NOR
-        "Ê¹ÓÃËÙ¶È£º" WHT "1\n" NOR
-        "ÎäÆ÷ÌØéLî„e£º" WHT "´óÐÍ„¦\n" NOR
-        "·Nî£º" WHT "†ÎÊÖ³ÖÓÃ\n" NOR
-        "Ÿo·¨Ê¹ÓÃµÄÂš˜I£º\n" WHT
-        "  µÂô”ÒÁ\n"
-        "  ÄÁŽŸ\n"
-        "  ·¨ŽŸ\n" NOR
-        "Î¨Ò»ÄÜÊ¹ÓÃµÄÈËÎï£º\n" WHT
-        "  »ìyê‡ IµÄÈËÎï\n" NOR;
+        "ç¥ž+5ï¼šã€Œ" HIR "ç¥žçš„å–§" HIY "ã€\n\n"
+        "æŠŠé™¤äº†æŸ„ç«¯ç”±ç™½æ‰€å¤–ï¼Œæ•´èº«æ¼†é»‘ï¼Œåˆƒï¼Œä¾¿ä¼¼è–„\n"
+        "ç‰‡èˆ¬ã€‚ä½†æ˜¯ä½ çš„æŒ‡å°–ç¢°åˆ°èº«ï¼Œèƒ½æ„Ÿåˆ°ä¸€åˆºéª¨çš„å†°ï¼Œ\n"
+        "ç”šè‡³å®ƒæ˜¯æœ‰å¿ƒè·³çš„ã€‚ç¥žçš„å–§é€ æ–¼1039 DR ï¼Œé€ è€…æ˜¯\n"
+        "å‰å¾·çš„ä¸€ä½é«˜ç‰§ï¼Œå‰å¾·å—åˆ°åŠäººçš„å‰¿ä¸‰å¹´\n"
+        "ä¹‹ä¹…ï¼Œé‹ç‰©çš„é“è·¯è¢«åˆ‡ï¼Œå£«å’Œäººç”±æ–¼æœŸå¾—ä¸åˆ°ï¼Œå¤§\n"
+        "éƒ½å£«ä½Žè½ï¼Œè€Œæ–¯æ´›å¡”ç¥žçš„ç‰§åœ¨å½¹ä¸­ä»»äº†æ•‘æ´å’Œçš„å·¥\n"
+        "ä½œï¼ŒåŒç‰§ä¹Ÿåœ¨ä¸åœåœ°å‘ç¥žç¥ˆç¦±ï¼Œä»¥æ±‚ä¿ä½‘å¹³å®‰ã€‚ç®¡äººè™”\n"
+        "èª çš„ä¿¡å¥‰è‘—ç¥žï¼Œç­‰å¾…ä¸Šå¤©åŠ©ï¼Œä½†å‰å¾·ä»æ–¼1042 DR è¢«åŠ\n"
+        "äººæ”»ï¼ŒåŒæ–¯æ´›å¡”ç¥žæˆäº†ä¸€ç‰‡å¢Ÿï¼ŒæŠŠä¹Ÿä¸çŸ¥æ‰€ã€‚\n\n"
+        "é»‘å…‹ãƒ»æ–¯æ˜¯ä¸€ä½è½çš„æ­¦å£«ï¼Œåœ¨æ’’ä¸åŸŽç´ ä»¥å†·é…·å’Œå‹‡çŒ›è‘—\n"
+        "ï¼Œäººä»–æ˜¯ã€Œåˆƒæ‰‹ã€ï¼Œä¸çŸ¥ä»–çš„å¾ˆå¤§ä¸€éƒ¨åˆ†èƒ½åŠ›æ˜¯è‡ªæ–¼ä»–\n"
+        "çš„é…ã€‚ä¸€æ¬¡åœ¨æ’’ä¸åŸŽçš„é…’å§ä¸­ï¼Œä¸€ä½å–é†‰çš„çŸ®äººè³Šä¸ä»–çš„\n"
+        "ï¼Œå‘ä»–å‡ºäº†æŒ‘ã€‚ç„¶é»‘å…‹ãƒ»æ–¯è‹±å‹‡å–„ï¼Œä¹Ÿæ‰‹åˆƒäº†ä½\n"
+        "ç‹‚å¦„çš„çŸ®äººè³Šï¼Œä½†ä»–ä»ç„¶ä¸å‰å¿™çš„å¤§ç¾¤æ­¦å£«é›†çš„åƒ±å‚­\n"
+        "å…µï¼Œè¢«åˆ†æˆäº†ä¸ƒã€‚è€ŒæŠŠä¹Ÿè¢«å‚­å…µä½œåˆ©å“å–èµ°ã€‚\n\n" NOR
+        "æ–™ï¼š\n"
+        "å®³åŠ›ï¼š" WHT "1d10+5ï¼Œå–„è‰¯æˆ–æ˜¯é‚ªçš„äººå¾—+10æ”¹å–„\n" NOR
+        "é›¶å‘½ä¸­å€¼ï¼š" WHT "å¾—+7æ”¹å–„\n" NOR
+        "å®³åž‹ï¼š" WHT "ç \n" NOR
+        "æŠ—åŠ›åŠ å€¼ï¼š\n" WHT
+        "  +15%é­”æ³•æŠ—åŠ›\n"
+        "  +50%å¯’å†·æŠ—åŠ›\n"
+        "  åæ”»çš„è±å…çŽ‡å®š+10æœ‰åˆ©\n" NOR
+        "ç‰¹æ®ŠåŠŸèƒ½ï¼š\n" WHT
+        "  æ¯å¤©æ–½å±•ä¸€æ¬¡æ‹‰ä¹‹æ€’\n"
+        "  æ¯å¤©æ–½å±•æ¬¡æ´›å±±é«˜ç­‰ç›¾\n"
+        "  æ¯å¤©æ–½å±•ä¸‰æ¬¡è‹±é›„æ¦‚\n"
+        "  æŒç”¨è€…æ­»äº¡ä¸€æŒ‡/å¾‹ä»¤ï¼šæ­»äº¡/ç‹‚æš´é­…æƒ‘/æä¹‹è¢/åŠ©æ³•å°å…ç–«\n"
+        "  ä¸­ç›®å¾Œæœ‰15%ç›®éœ‡æ˜ï¼Œ10\n"
+        "  ä¸­ç›®å¾Œæœ‰50%ä»¥æŒç”¨è€…ä¸­å¿ƒå‡ºä¸€3d6çš„ç«çƒ\n" NOR
+        "é‡é‡ï¼š" WHT "10\n" NOR
+        "ä½¿ç”¨é€Ÿåº¦ï¼š" WHT "1\n" NOR
+        "æ­¦å™¨ç‰¹ï¼š" WHT "å¤§åž‹\n" NOR
+        "ï¼š" WHT "æ‰‹æŒç”¨\n" NOR
+        "æ³•ä½¿ç”¨çš„ï¼š\n" WHT
+        "  å¾·ä¼Š\n"
+        "  ç‰§\n"
+        "  æ³•\n" NOR
+        "å”¯ä¸€èƒ½ä½¿ç”¨çš„äººç‰©ï¼š\n" WHT
+        "  æ··çš„äººç‰©\n" NOR;
 }
 
 mixed hit_ob(object me, object victim, int damage_bonus)
@@ -91,16 +91,16 @@ mixed hit_ob(object me, object victim, int damage_bonus)
         if (random(100) < 15 && living(victim))
         {
                 victim->unconcious();
-                return HIR "ö®•régÖ»ÒŠ$N" HIY "ÉñÂ}éL„¦" HIR"„¦Ã¢±©"
-                       "q£¬$n" HIR "îDÓXÒ»ê‡»èÑ£¡£\n" NOR;
+                return HIR "éœŽåª$N" HIY "ç¥ž" HIR"èŠ’æš´"
+                       "ï¼Œ$n" HIR "ä¸€æ˜çœ©ã€‚\n" NOR;
         } else
         if (random(100) < 50)
         {
                 victim->receive_wound("qi", n * 100, me);
                 victim->receive_wound("jing", n * 50, me);
-                return HIR "Ö»ÒŠ$N" HIY "ÉñÂ}éL„¦" HIR"„¦¼â¶¸È»‡ŠÉä"
-                       "³ö" + chinese_number(n) + "‚€»ðÇò£¬±M”µ“ôÔÚ"
-                       "$n" HIR "È«Éí¡£\n" NOR;
+                return HIR "åª$N" HIY "ç¥ž" HIR"å°–é™¡ç„¶å°„"
+                       "å‡º" + chinese_number(n) + "ç«çƒï¼Œåœ¨"
+                       "$n" HIR "å…¨èº«ã€‚\n" NOR;
         }
 }
 
@@ -110,10 +110,10 @@ int do_cast(string arg)
         int n, i, flag, damage;
 
         if (! arg || arg == "")
-                return notify_fail("ÄãÒªÊ©Õ¹Ê²÷á·¨Ðg£¿\n");
+                return notify_fail("ä½ è¦æ–½å±•ä»€éº½æ³•ï¼Ÿ\n");
 
         if (arg != "rage" && arg != "shield")
-                return notify_fail("ÄãŸo·¨Ê©Õ¹´Ëî·¨Ðg¡£\n");
+                return notify_fail("ä½ æ³•æ–½å±•æ­¤æ³•ã€‚\n");
 
         if (arg == "rage")
         {
@@ -121,62 +121,62 @@ int do_cast(string arg)
                 obs = me->query_enemy();
 
                 if (! me->is_fighting())
-                        return notify_fail("ÄãÖ»ÓÐÔÚ‘ðôYÖÐ²ÅÄÜÊ©Õ¹"
-                                           RAGE "¡£\n");
+                        return notify_fail("ä½ åªæœ‰åœ¨ä¸­æ‰èƒ½æ–½å±•"
+                                           RAGE "ã€‚\n");
 
                 if (me->is_busy())
-                        return notify_fail("Äã¬FÔÚÕýÔÚÃ¦£¬›]ÓÐ•rég"
-                                           "Ê©·¨" RAGE "¡£\n");
+                        return notify_fail("ä½ åœ¨æ­£åœ¨å¿™ï¼Œæœ‰"
+                                           "æ–½æ³•" RAGE "ã€‚\n");
 
-                message_vision(HIW "\n$N" HIW "Ê©·¨" RAGEC + HIW "¡¹"
-                               "£¬¸ßÂ•ÄîÕbµÀ£º±ÈµÏÄ·¡¤†ÌØÃÉ¡¤Ì©Àï"
-                               "°¢ÆÕ¡¤°£¿Ø¡£\n\n" NOR, me);
+                message_vision(HIW "\n$N" HIW "æ–½æ³•" RAGEC + HIW "ã€"
+                               "ï¼Œé«˜å¿µé“ï¼šæ¯”è¿ªå§†ãƒ»ç‰¹è’™ãƒ»æ³°é‡Œ"
+                               "é˜¿æ™®ãƒ»åŸƒæŽ§ã€‚\n\n" NOR, me);
                 me->start_busy(5);
 
                 for (flag = 0, i = 0; i < sizeof(obs); i++)
                 {
                         if (random(10) > 3)
                         {
-                                tell_object(obs[i], HIR "ÄãÖ»ÒŠÑÛÇ°¹âÃ¢"
-                                                    "Ò»éW£¬ö®•régŸo”µ¹â"
-                                                    "¾€±ãÈçä“á˜°ã´ÌÈëów"
-                                                    "ÄÚ£¬Ž×ÓûÖÏÏ¢¡£\n" NOR);
+                                tell_object(obs[i], HIR "ä½ éš»çœ¼å‰å…‰èŠ’"
+                                                    "ä¸€ï¼ŒéœŽå…‰"
+                                                    "ä¾¿å¦‚èˆ¬åˆºå…¥"
+                                                    "å…§ï¼Œæ¬²çª’æ¯ã€‚\n" NOR);
 
                                 damage = 1000 + random(3000);
                                 obs[i]->receive_wound("qi", damage);
                                 obs[i]->receive_wound("jing", damage / 2, me);
 
                                 message("vision", HIY + obs[i]->name() +
-                                                  HIY "Ö»ÒŠÑÛÇ°¹âÃ¢Ò»éW"
-                                                  "£¬ö®•régŸo”µ¹â¾€±ãÈç"
-                                                  "ä“á˜°ã´ÌÈëówÄÚ£¬Ž×Óû"
-                                                  "ÖÏÏ¢¡£\n\n" NOR,
+                                                  HIY "éš»çœ¼å‰å…‰èŠ’ä¸€"
+                                                  "ï¼ŒéœŽå…‰ä¾¿å¦‚"
+                                                  "èˆ¬åˆºå…¥å…§ï¼Œæ¬²"
+                                                  "çª’æ¯ã€‚\n\n" NOR,
                                                   environment(me),
                                                   ({ obs[i] }));
                                 flag = 1;
                         } else
                         {
-                                tell_object(obs[i], HIC "Äã·¨Ðg»íÃâÂÊ™z¶¨"
-                                                    "³É¹¦£¬±Üé_ÁË" RAGEC +
-                                                    HIC "¡¹µÄ¹¥“ô¡£\n" NOR);
+                                tell_object(obs[i], HIC "ä½ æ³•è±å…çŽ‡å®š"
+                                                    "æˆåŠŸï¼Œé¿äº†" RAGEC +
+                                                    HIC "ã€çš„æ”»ã€‚\n" NOR);
                         }
                 }
                 if (! flag) 
-                        message_vision(HIC "È»¶ø›]ÓÐÈÎºÎÈËÊÜµ½$N" RAGEC +
-                                       HIC "¡¹µÄÓ°Ïì¡£\n" NOR, me, 0, obs);
+                        message_vision(HIC "ç„¶è€Œæœ‰ä»»ä½•äººå—åˆ°$N" RAGEC +
+                                       HIC "ã€çš„å½±éŸ¿ã€‚\n" NOR, me, 0, obs);
                 return 1;
         }
 
         if (arg == "shield")
         {
                 if( query_temp("shieldc", me) )
-                        return notify_fail("ÄãÒÑ½›Ê©Õ¹ÁË" SHIELD "¡£\n");
+                        return notify_fail("ä½ å·²æ–½å±•äº†" SHIELD "ã€‚\n");
 
                 n = 500;
 
-                message_vision(HIW "\n$N" HIW "Ê©·¨" SHIELDC + HIW "¡¹"
-                               "£¬¸ßÂ•ÄîÕbµÀ£º†µÛË¹¡¤Ë÷Àû¡¤Âå¹þÎá¼ªÌØ"
-                               "¡¤ÄªÀ­Ë_À­¡£\n\n" NOR, me);
+                message_vision(HIW "\n$N" HIW "æ–½æ³•" SHIELDC + HIW "ã€"
+                               "ï¼Œé«˜å¿µé“ï¼šå¸æ–¯ãƒ»ç´¢åˆ©ãƒ»æ´›å“ˆå¾å‰ç‰¹"
+                               "ãƒ»èŽ«æ‹‰æ‹‰ã€‚\n\n" NOR, me);
 
                 addn_temp("apply/armor", n, me);
                 set_temp("shieldc", 1, me);
@@ -194,6 +194,6 @@ void remove_effect(object me, int n)
                {
                        addn_temp("apply/armor", -n, me);
                        delete_temp("shieldc", me);
-                       tell_object(me, "ÄãµÄ" SHIELD "Ê©Õ¹Íê®…¡£\n");
+                       tell_object(me, "ä½ çš„" SHIELD "æ–½å±•å®Œã€‚\n");
                }
 }

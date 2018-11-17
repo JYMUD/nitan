@@ -4,14 +4,14 @@ inherit TESSERA;
 
 void create()
 {
-        set_name(HIR "ÖìÈ¸¡¤»ğ" NOR, ({"zhu que", "fire"}));
+        set_name(HIR "æœ±é›€ãƒ»ç«" NOR, ({"zhu que", "fire"}));
         set_weight(50);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("long", HIR "¿ÉÓÃÓÚÏâÇ¶10LV£¬ÊôĞÔ»ğ¡£\n" NOR);
+                set("long", HIR "å¯ç”¨æ–¼é‘²åµŒ10LVï¼Œå±¬æ€§ç«ã€‚\n" NOR);
                 set("value", 100000);
-                set("unit", "¿é");
+                set("unit", "å¡Š");
                 set("no_identify", 1); 
         }
         setup();

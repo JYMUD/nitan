@@ -7,54 +7,54 @@
 inherit F_CLEAN_UP;
 
 mapping *bangjobs = ({
-        ([      "name"  :  "ªÿªÿ",
+        ([      "name"  :  "ÂõûÂõû",
                 "file"  :  "/d/quanzhou/npc/huihui",
-                "area"  :  "»™÷›",
-                "type"  :  "…±",
+                "area"  :  "Ê≥âÂ∑û",
+                "type"  :  "ÊÆ∫",
                 "bonus" :  18,
                 "score" :  4,
         ]),
 
-        ([      "name"  :  "Ã¡π§",
+        ([      "name"  :  "Â°òÂ∑•",
                 "file"  :  "/d/hangzhou/npc/tbbz",
-                "area"  :  "∫º÷›ÕÂ∫£µÃ",
-                "type"  :  "…±",
+                "area"  :  "Êù≠Â∑ûÁÅ£Êµ∑Â†§",
+                "type"  :  "ÊÆ∫",
                 "bonus" :  15,
                 "score" :  3,
         ]),
 
-        ([      "name"  :  "∫£…≥≈…—ŒË…",
+        ([      "name"  :  "Êµ∑Ê≤ôÊ¥æÈπΩÊ¢ü",
                 "file"  :  "/d/hangzhou/npc/hsbz",
-                "area"  :  "∫º÷›ÕÂ—ŒÃÔ",
-                "type"  :  "…±",
+                "area"  :  "Êù≠Â∑ûÁÅ£ÈπΩÁî∞",
+                "type"  :  "ÊÆ∫",
                 "bonus" :  18,
                 "score" :  5,
         ]),
 
-        ([      "name"  :  "ÃÏ”•ΩÃ÷⁄",
+        ([      "name"  :  "Â§©È∑πÊïôÁúæ",
                 "file"  :  "/d/hangzhou/npc/tyjz",
-                "area"  :  "∫º÷›ÕÂ∫£…Ò√Ì",
-                "type"  :  "…±",
+                "area"  :  "Êù≠Â∑ûÁÅ£Êµ∑Á•ûÂªü",
+                "type"  :  "ÊÆ∫",
                 "bonus" :  20,
                 "score" :  5,
         ]),
 
-        ([      "type"  :  "¬Ú¬Ù",
+        ([      "type"  :  "Ë≤∑Ë≥£",
         ]),
 
-        ([      "type"  :  "¬Ú¬Ù",
+        ([      "type"  :  "Ë≤∑Ë≥£",
         ]),
 
-        ([      "type"  :  "¬Ú¬Ù",
+        ([      "type"  :  "Ë≤∑Ë≥£",
         ]),
 
-        ([      "type"  :  "¬Ú¬Ù",
+        ([      "type"  :  "Ë≤∑Ë≥£",
         ]),
 
-        ([      "type"  :  "ªÔº∆",
+        ([      "type"  :  "Â§•Ë®à",
         ]),
 
-        ([      "type"  :  "ªÔº∆",
+        ([      "type"  :  "Â§•Ë®à",
         ]),
 });
 

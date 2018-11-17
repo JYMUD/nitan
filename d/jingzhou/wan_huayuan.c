@@ -4,11 +4,11 @@ inherit ROOM;
 
 void create ()
 {
-        set ("short", "��԰");
+        set ("short", "花園");
         set ("long", @LONG
-������ҵĺ�԰��������ɸ�ӡ���ͷ��ʯ�ʡ�����֮�������һ
-��С������һ����¯����¯�в�����֦��ȼ�˵����㡣��ǰ�и��˹���
-�����ͷ����֪����ʲôԸ�ġ�
+這是萬家的後園，堆置了篩子、鋤頭、石臼、風扇之類雜物。在一
+張小几放着一座香爐，香爐中插着三枝點燃了的線香。幾前有個人跪着
+向天磕頭，不知祈着什麼願心。
 LONG);
         set("outdoors", "jingzhou");
         set("region", "jingzhou");

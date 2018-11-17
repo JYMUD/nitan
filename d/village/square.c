@@ -2,11 +2,11 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "��ȳ�");
+        set("short", "打穀場");
         set("long", @LONG
-�����Ǵ��ӵ����ģ�һ��ƽ̹�Ĺ㳡��ÿ�����մ�Ⱦ����⡣��
-�������пô�����ƽ�ղ��෹�ᣬ�������Ů���ٶ�����������̸
-��˵�ء������м�����ȶѡ�
+這裡是村子的中心，一個平坦的廣場，每年秋收打穀就在這。廣
+場東角有棵大槐樹，平日茶餘飯後，村裡的男女老少都愛聚在這裡談
+天說地。角上有幾個大穀堆。
 LONG );
         set("exits", ([
                 "northwest" : __DIR__"nwroad2",

@@ -5,11 +5,11 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "����");
+        set("short", "走廊");
         set("long", @LONG
-�������������������������ڱ����ܶ����լ�ˡ������Ǽ���ӻ�
-�Ĳ񷿣����и�СС��ͤ�ӡ�һЩ�ճ������İ��ھ����ע����ÿ��
-�ˡ�
+寬敞的走廊人來人往，再向內便是總舵的內宅了。西面是間干雜活
+的柴房，向東有個小小的亭子。一些日常守衛的幫眾警惕地注視着每個
+人。
 LONG );
         set("exits", ([
                 "west"  : __DIR__"clchaifang",

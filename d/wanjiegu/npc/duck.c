@@ -4,11 +4,11 @@ inherit NPC;
 
 void create()
 {
-        set_name("Ò°Ñ¼", ({ "duck" }) );
-        set("race", "·ÉÇÝ");
+        set_name("é‡Žé´¨", ({ "duck" }) );
+        set("race", "é£›ç¦½");
         set("age", 1);
-        set("long", "Ò»Ö»Ò°Ñ¼¡£\n");
-        set("limbs", ({ "Í·²¿", "ÉíÌå", "Î²°Í" }) );
+        set("long", "ä¸€éš»é‡Žé´¨ã€‚\n");
+        set("limbs", ({ "é ­éƒ¨", "èº«é«”", "å°¾å·´" }) );
         set("verbs", ({ "bite" }) );
 
         set_skill("dodge", 50);

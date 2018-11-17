@@ -1,18 +1,18 @@
-// ma.c ÂíÓÀ¿µ
+// ma.c é¦¬æ°¸åº·
 
 inherit NPC;
 inherit F_DEALER;
 
 void create()
 {
-        set_name("ÂíÓÀ¿µ", ({ "ma yongkang", "ma" }));
-        set("title", "ÔÓ»õÆÌÀÏ°å");
+        set_name("é¦¬æ°¸åº·", ({ "ma yongkang", "ma" }));
+        set("title", "é›œè²¨é‹ªè€é—†");
         set("shen_type", 1);
 
-        set("gender", "ÄĞĞÔ");
+        set("gender", "ç”·æ€§");
         set("age", 45);
         set("long",
-                "ÂíÀÏ°åÊÇÍÁÉúÍÁ³¤µÄÎŞÎıÈË£¬×öÁË¼¸Ê®ÄêµÄĞ¡ÂòÂô¡£\n");
+                "é¦¬è€é—†æ˜¯åœŸç”ŸåœŸé•·çš„ç„¡éŒ«äººï¼Œåšäº†å¹¾åå¹´çš„å°è²·è³£ã€‚\n");
         set_skill("unarmed", 50);
         set_skill("dodge", 50);
         set_temp("apply/damage", 15);

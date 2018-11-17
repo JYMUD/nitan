@@ -2,11 +2,11 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "�չ���");
+        set("short", "收購店");
         set("long", @LONG
-����һ��С�չ��꣬������������ë��̺�����ϰ�Ϊһ��
-˹�ˣ�ר���չ������������һ�Ŵ���Ƥֽ�ϣ�д�����չ���
-�����������
+這是一個小收購店，房屋內鋪着羊毛地毯。店老闆為一波
+斯人，專門收購當地物產。在一張大羊皮紙上，寫着需收購的
+各類物產表。
 LONG);
         set("exits", ([
                     "east" : __DIR__"huijiang3",

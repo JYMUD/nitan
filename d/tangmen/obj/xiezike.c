@@ -12,9 +12,9 @@ void init()
 
 void create()
 {
-        set_name("É³³æ¿Ç", ({"shachong ke", "ke"}));
-        set("unit", "Ö»");
-        set("long", "ÕâÊÇÒ»Ö»É³³æµÄ¸É¿Ç£¬ÊÇÖÆ±¸¶¾Ò©µÄÔ­ÁÏ¡£\n");
+        set_name("æ²™èŸ²æ®¼", ({"shachong ke", "ke"}));
+        set("unit", "åª");
+        set("long", "é€™æ˜¯ä¸€éš»æ²™èŸ²çš„å¹²æ®¼ï¼Œæ˜¯è£½å‚™æ¯’è—¥çš„åŸæ–™ã€‚\n");
         set("value", 300);
 //        setup();
 }
@@ -22,6 +22,6 @@ void create()
 int do_eat(string arg)
 {
         if (!id(arg))
-                return notify_fail("ÄãÒª³ÔÊ²Ã´£¿\n");
-        return notify_fail("ÄãÕÒËÀ°¡¡£\n");
+                return notify_fail("ä½ è¦åƒä»€éº¼ï¼Ÿ\n");
+        return notify_fail("ä½ æ‰¾æ­»å•Šã€‚\n");
 }

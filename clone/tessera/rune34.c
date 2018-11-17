@@ -1,7 +1,7 @@
 
 //rune33.c
 
-// ZodË_µÂ
+// Zodå¾·
 
 #include <ansi.h>
 
@@ -11,13 +11,13 @@ int is_rune() { return 1; }
 
 void create()
 {
-        set_name(HIW "·ûÎÄ" NOR, ({"rune34", "rune"}));
+        set_name(HIW "ç¬¦æ–‡" NOR, ({"rune34", "rune"}));
         set_weight(10);
         if (clonep())
                 set_default_object(__FILE__);
         else {
-                set("long", "·ûÎÄ£ºÉÏÇåÓíÓà·û£¬¿ÉÒÔ·ÅÈë°¼²ÛÎïÆ·¡£\n");
-                set("unit", "¸ö");
+                set("long", "ç¬¦æ–‡ï¼šä¸Šæ¸…ç¦¹ä½™ç¬¦ï¼Œå¯ä»¥æ”¾å…¥å‡¹æ§½ç‰©å“ã€‚\n");
+                set("unit", "å€‹");
                 set("enchase/SN", 34);
                 set("enchase/type", "all");
                 set("enchase/consistence", 100);

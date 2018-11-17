@@ -2,11 +2,11 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "ҩ��");
+        set("short", "藥鋪");
         set("long", @LONG
-����һ��ҩ�̣�һ��ŨŨ��ҩζ���㼸����Ϣ�����Ǵ�ҩ���ϵ�
-���ٸ�С������ɢ�������ġ���ҽƽһָ���ڲ輸�Զ��Ժ��Ų裬��
-Ҳ������һ�ۡ�
+這是一家藥鋪，一股濃濃的藥味讓你幾欲窒息，那是從葯柜上的
+幾百個小抽屜里散發出來的。神醫平一指坐在茶几旁獨自喝着茶，看
+也不看你一眼。
 LONG );
         set("objects", ([
                 "/d/city/npc/ping" : 1,

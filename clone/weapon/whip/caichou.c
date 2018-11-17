@@ -6,13 +6,13 @@ inherit WHIP;
 
 void create()
 {
-        set_name("²Ê³ñ", ({"whip"}));
+        set_name("ç¶µç¶¢", ({"whip"}));
         set_weight(1000);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("long","Ò»Ìõ³¤³¤µÄ²Ê³ñ£¬ÊÇÓÃÓÚÎèµ¸µÄµÀ¾ß¡£\n");
-                set("unit", "Ìõ");
+                set("long","ä¸€æ¢é•·é•·çš„ç¶µç¶¢ï¼Œæ˜¯ç”¨æ–¼èˆè¹ˆçš„é“å…·ã€‚\n");
+                set("unit", "æ¢");
                 set("value", 500);
         }
         init_whip(10);

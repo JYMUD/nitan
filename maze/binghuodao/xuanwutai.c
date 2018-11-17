@@ -2,11 +2,11 @@ inherit __DIR__"binghuodao";
 
 void create()
 {
-        set("short", "ÐþÎäÌ¨");
+        set("short", "çŽ„æ­¦å°");
         set("long",
-"ÕâÀïÊÇÒ»´¦¿íÀ«µÄ¼ÀÌ¨£¬¼ÀÌ¨ÖÐ¼äÓÐÒ»¸ùÊ¯Öù£¬ÉÏÃæÐ´×ÅÏÊºì\n"
-"µÄÈý¸ö´ó×Ö¡°ÐþÎäÌ¨¡±£¬¼ÀÌ¨ËÄÖÜ´£Á¢×ÅËÄ¸ùÊ¯Öù£¬ÉÏÃæµñ¿Ì×ÅÐþÎä\n"
-"ÉñÊÞµÄÄ£Ñù¡£¾ÝËµÔÚÕâÀïÚ¤Ë¼£¨reflect£©ÄÜ»ñµÃ¸ü¶àÊÕ»ñ¡£\n"
+"é€™è£¡æ˜¯ä¸€è™•å¯¬é—Šçš„ç¥­å°ï¼Œç¥­å°ä¸­é–“æœ‰ä¸€æ ¹çŸ³æŸ±ï¼Œä¸Šé¢å¯«ç€é®®ç´…\n"
+"çš„ä¸‰å€‹å¤§å­—â€œçŽ„æ­¦å°â€ï¼Œç¥­å°å››å‘¨çŸ—ç«‹ç€å››æ ¹çŸ³æŸ±ï¼Œä¸Šé¢é›•åˆ»ç€çŽ„æ­¦\n"
+"ç¥žç¸çš„æ¨¡æ¨£ã€‚æ“šèªªåœ¨é€™è£¡å†¥æ€ï¼ˆreflectï¼‰èƒ½ç²å¾—æ›´å¤šæ”¶ç©«ã€‚\n"
 );
         set("exits", ([ 
                 "west"   : __DIR__"bingfenggu2", 

@@ -10,23 +10,23 @@ int perform(object me, object target)
         int i, skill;
  
         if (! me->is_fighting())
-                return notify_fail("�廢���ŵ����ϡ��־�ֻ����ս����ʹ�á�\n");
+                return notify_fail("五虎斷門刀「斷」字決只能在戰鬥中使用。\n");
                 
         if( query_temp("perform", me) )
-                return notify_fail("����һ��δʹ�꣡\n");
+                return notify_fail("你上一招未使完！\n");
                 
         if( !objectp(weapon=query_temp("weapon", me) )
          || query("skill_type", weapon) != "blade" )
-                return notify_fail("��ʹ�õ��������ԡ�\n");
+                return notify_fail("你使用的武器不對。\n");
                 
         if( query("neili", me)<200 )
-                return notify_fail("�������������\n");
+                return notify_fail("你的真氣不夠！\n");
                 
         if ((int)me->query_skill("blade") < 60 ||
             me->query_skill_mapped("blade") != "wuhu-duanmendao")
-                return notify_fail("��ġ��廢���ŵ����������ң��޷�ʹ�á��ϡ��־���\n");
+                return notify_fail("你的「五虎斷門刀」還不到家，無法使用「斷」字決！\n");
                 
-        msg = HIY "$N��Ȼ���أ�ʹ�����廢���ŵ������־�����ʱ����׹�ֱ��ǰ��ȥ��\n" NOR;
+        msg = HIY "$N猛然伏地，使出「五虎斷門刀」斷字決，頓時五道白光直向前滾去！\n" NOR;
         message_combatd(msg, me);
         me->clean_up_enemy();
         ob = me->select_opponent();
@@ -38,7 +38,7 @@ int perform(object me, object target)
         for(i = 0; i < 5; i++)
         if( me->is_fighting(ob) && ob->is_fighting(me) && query("eff_qi", ob)>0 )
         {
-              set_temp("action_msg", "������", me);
+              set_temp("action_msg", "緊接着", me);
               if( !query("equipped", weapon))break;
               
               COMBAT_D->do_attack(me, ob,weapon, 0);

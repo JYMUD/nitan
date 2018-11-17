@@ -1,14 +1,14 @@
-// xiaowu2.c ����
+// xiaowu2.c 蜂屋
 // Java Oct.10 1998
 
 inherit ROOM;
 
 void create()
 {
-        set("short", "����");
+        set("short", "蜂屋");
         set("long", @LONG
-������С��Ůι��ѵ�����ķ��ݣ��ݽ��Ϲ��źܶ�������εķ�
-������δ���ţ����ŵõ�һ����۵����㡣
+這裡是小龍女餵養訓練玉蜂的蜂屋，屋角上掛着很多個六角形的蜂
+巢，還未進門，就聞得到一陣蜂蜜的甜香。
 LONG        );
         set("exits", ([
                 "west"  : __DIR__"mudao12",

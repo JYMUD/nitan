@@ -4,10 +4,10 @@
 inherit ROOM;
 void create()
 {
-        set("short", "��ʯ���");
+        set("short", "青石大道");
         set("long", @LONG
-�غ�����Ե������������ֹ��ӣ������۴��αȣ���������������
-һƬ̫ƽ���־��󡣽ֶ��ߵ�һ�ҵ����ﴫ�����������Ĵ�������
+沿湖大道旁店鋪林立，長街故朴，屋舍鱗次櫛比，道上人來車往，
+一片太平熱鬧景象。街東邊的一家店鋪里傳來叮叮噹噹的打鐵聲。
 LONG);
         set("exits", ([
             "north"     : __DIR__"road10",

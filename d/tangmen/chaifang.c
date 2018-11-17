@@ -1,4 +1,4 @@
-//chaifang.c                ËÄ´¨ÌÆÃÅ¡ª²ñ·¿
+//chaifang.c                å››å·å”é–€â€•æŸ´æˆ¿
 
 #include <ansi.h>
 #include <room.h>
@@ -6,11 +6,11 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "²ñ·¿");
+        set("short", "æŸ´æˆ¿");
         set("long",
-"ÕâÀïÊÇºóÔºµÄ²ñ·¿£¬ÎİÖĞ¶ÑÂúÁËÅüºÃµÄ²ñ»ğ£¬ÂúÎİ¶¼ÊÇÄ¾²ÄµÄÏãÎ¶£¬\n"
-"ÔÚÉ½Ò²ËÆµÄ²ñ¶ÑÅÔÒ»ÉÈĞ¡ÃÅÍ¨ÏòºóÉ½£¬ÌıËµÄÇÀï³öÃ»×Å²òÀÇ»¢±ªºÍòÚò¼Éß\n"
-"Ğ«£¬¹¤·ò²»¹»¸ß¿É²»ÒªÂÒÅÜÑ½£¡Î÷±ß¾ÍÊÇ³ø·¿ÁË£¡\n"
+"é€™è£¡æ˜¯å¾Œé™¢çš„æŸ´æˆ¿ï¼Œå±‹ä¸­å †æ»¿äº†åŠˆå¥½çš„æŸ´ç«ï¼Œæ»¿å±‹éƒ½æ˜¯æœ¨æçš„é¦™å‘³ï¼Œ\n"
+"åœ¨å±±ä¹Ÿä¼¼çš„æŸ´å †æ—ä¸€æ‰‡å°é–€é€šå‘å¾Œå±±ï¼Œè½èªªé‚£è£¡å‡ºæ²’ç€è±ºç‹¼è™è±¹å’Œèœˆèš£è›‡\n"
+"è ï¼Œå·¥å¤«ä¸å¤ é«˜å¯ä¸è¦äº‚è·‘å‘€ï¼è¥¿é‚Šå°±æ˜¯å»šæˆ¿äº†ï¼\n"
 );
         set("exits", ([
                 "northeast" : __DIR__"houzhai",
@@ -18,7 +18,7 @@ void create()
                 "south" : __DIR__"nzlange1",
                 "north" : __DIR__"exiaolu1",
         ]));
-        create_door("northeast","Ä¾ÃÅ","southwest",DOOR_CLOSED);
+        create_door("northeast","æœ¨é–€","southwest",DOOR_CLOSED);
         set("objects", ([
                 CLASS_D("tangmen") + "/tangpeng" : 1,
         ]));
@@ -27,9 +27,9 @@ void create()
 }
 int valid_leave(object me, string dir)
 {
-        if( (dir == "north") && (query("family/family_name", me) != "ÌÆÃÅÊÀ¼Ò") && 
+        if( (dir == "north") && (query("family/family_name", me) != "å”é–€ä¸–å®¶") && 
                 !wizardp(me) && (objectp( present("tang peng", environment(me)) ) ))
-                return notify_fail("ÌÆÅóÒ»ÉìÊÖ£¬ËµµÀ£º¡°Äã²»ÊÇÌÆÃÅÖĞÈË£¬²»ÄÜÔÙÏòÇ°×ßÁË£¡¡±\n");
+                return notify_fail("å”æœ‹ä¸€ä¼¸æ‰‹ï¼Œèªªé“ï¼šâ€œä½ ä¸æ˜¯å”é–€ä¸­äººï¼Œä¸èƒ½å†å‘å‰èµ°äº†ï¼â€\n");
         else
                 return ::valid_leave(me, dir);
 }

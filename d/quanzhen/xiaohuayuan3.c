@@ -1,4 +1,4 @@
-// xiaohuayuan3.c С��԰
+// xiaohuayuan3.c 小花園
 // Winder Oct.10 1998
 
 #include <ansi.h>
@@ -6,12 +6,12 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "С��԰");
+        set("short", "小花園");
         set("long", @LONG
-���������������С��԰����ֲ��һЩ�в����������Ļ�ľ��
-԰������һ����ɽ����ɽ����һ̶СС�Ľ���أ���ˮ�峺���ף�
-�㿴����������ɫ�Ľ����������������յ�������ȥ��������ͯ��
-��������Ϸ�š�
+這裡是重陽觀里的小花園，種植着一些叫不出名字來的花木，
+園角砌着一座假山，假山下是一潭小小的金魚池，池水清澈見底，
+你看見有數條紅色的金魚在裡面悠哉游哉地游來游去。幾個道童正
+在這裡嬉戲着。
 LONG
         );
         set("outdoors", "chongyang");

@@ -7,10 +7,10 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "�뷿");
+        set("short", "閨房");
         set("long", @LONG
-������С��Ĺ뷿��һ���������������һ����齷���ǽ�ǣ���
-��ϸɴ����С��������һ��ջ��ڳ�˼������������԰��
+這是凌小姐的閨房，一股幽香撲面而來。一張綉榻放在牆角，垂
+着細紗。凌小姐正對着一盆菊花在沉思。北面是座花園。
 LONG );
 
         set("exits", ([

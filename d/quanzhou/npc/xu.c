@@ -6,14 +6,14 @@ inherit F_DEALER;
 
 void create()
 {
-        set_name("ĞíÀÏ°å", ({ "xu laoban", "xu", "laoban", "boss" }));
-        set("title", "³ñ¶Ğ×¯ÀÏ°å");
+        set_name("è¨±è€é—†", ({ "xu laoban", "xu", "laoban", "boss" }));
+        set("title", "ç¶¢ç·èŠè€é—†");
         set("shen_type", 1);
 
         set("str", 20);
-        set("gender", "ÄĞĞÔ");
+        set("gender", "ç”·æ€§");
         set("age", 35);
-        set("long", "ºèÏè³ñ¶Ğ×¯ÄËÊÇĞíÀÏ°å×æ´«µÄÉúÒâ£¬µ½ĞíÀÏ°åÒÑÊÇµÚËÄ´úÁË¡£\n");
+        set("long", "é´»ç¿”ç¶¢ç·èŠä¹ƒæ˜¯è¨±è€é—†ç¥–å‚³çš„ç”Ÿæ„ï¼Œåˆ°è¨±è€é—†å·²æ˜¯ç¬¬å››ä»£äº†ã€‚\n");
         set("attitude", "friendly");
         set_skill("unarmed", 50);
         set_skill("dodge", 50);

@@ -1,26 +1,26 @@
 
                     
-        $HIG$¡«$NOR$          $HIR$- NT(ultimate)$NOR$                      
-       $HIB$¡ó$NOR$$HIG$ £©$NOR$             $HIR$Ð¦°Á½­ºþ$NOR$
-       $HIB$||$NOR$$HIG$ £¨($NOR$                                                                     
-       $HIB$||$NOR$$HIG$   £©$NOR$                                                                    
-$HIC$      $NOR$$HIB$/¦á\$NOR$                       $HIK$- NTOS Support Epoll-Current-64bits, NTlib V5.1g -$NOR$
-$HIB$     (/¦à\)$NOR$                                                                     
-$HIB$      ¨Š|                          $NOR$$HIW$Ë­  ×Ý  Ç§  ¾È  ÑÛ  Èý  ½«  ÏÐ  ÊÂ  Ê®  Òø  ÕÔ$NOR$       
-$HIB$      ¨Š|$NOR$$HIY$¨v  ¨x                    $NOR$$HIW$ÄÜ  ËÀ  Çï  ÕÔ  »¨  ±­  ÖË  ¹ý  ÁË  ²½  °°  ¿Í$NOR$       
-$HIB$      ¨Š|$NOR$$HIY$ \¨w (       $NOR$$HIR$¨x¨x         $NOR$$HIW$Êé  ÏÀ  ¶þ  »Ó  ¶ú  ÍÂ  à¢  ÐÅ  ·÷  É±  ÕÕ  çÏ$NOR$       
-$HIB$      ¨Š|$NOR$$HIY$¨Š¦à ¨v    $NOR$$HIR$¨Š½­Ð¦¨‡       $NOR$$HIW$¸ó  ¹Ç  ×³  ½ð  ÈÈ  È»  Öì  Áê  ÒÂ  Ò»  °×  ºú$NOR$             
-$HIB$      ¨Š|$NOR$$HIY$     ¨v¨v  $NOR$$HIR$¨Šºþ°Á¨‡       $NOR$$HIW$ÏÂ  Ïã  Ê¿  é³  ºó  Åµ  º¥  Òû  È¥  ÈË  Âí  Ó§$NOR$             
-$HIB$      ¨Š|$NOR$$HIY$       ¨v¨v $NOR$$HIR$ ¨‰¨‰            $NOR$$HIW$                                               $NOR$             
-$HIB$      ¨Š|$NOR$$HIY$         ¨v¨v             $NOR$$HIW$°×  ²»  Ÿ@  ºª  Òâ  Îå  ³Ö  ÍÑ  Éî  Ç§  ìª  Îâ$NOR$                   
-$HIB$      ¨Š|$NOR$$HIY$           ¨v¨v           $NOR$$HIW$Ê×  ²Ñ  ºÕ  µ¦  Æø  ÔÀ  õü  ½£  ²Ø  Àï  í³  ¹³$NOR$
-$HIC$      $NOR$$HIB$¨Š|$NOR$$HIC$             $NOR$$HIY$¨v¨v     $NOR$$HIW$    Ì«  ÊÀ  ´ó  ÏÈ  ËØ  µ¹  È°  Ï¥  Éí  ²»  Èç  Ëª$NOR$
-$HIB$      ¨Š|               $NOR$$HIY$¨v¨v       $NOR$$HIW$Ðþ  ÉÏ  Áº  Õð  ÄÞ  Îª  ºò  Ç°  Óë  Áô  Á÷  Ñ©$NOR$
-$HIB$      ¨Š|                $NOR$ $HIY$¨v¨v     $NOR$$HIW$¾­  Ó¢  ³Ç  ¾ª  Éú  Çá  Ó®  ºá  Ãû  ÐÐ  ÐÇ  Ã÷$NOR$
-$HIB$      ¨Š/                  $NOR$ $HIY$¨v\ $NOR$
+        $HIG$ï½ž$NOR$          $HIR$- NT(ultimate)$NOR$                      
+       $HIB$â—‡$NOR$$HIG$ ï¼‰$NOR$             $HIR$ç¬‘å‚²æ±Ÿæ¹–$NOR$
+       $HIB$||$NOR$$HIG$ ï¼ˆ($NOR$                                                                     
+       $HIB$||$NOR$$HIG$   ï¼‰$NOR$                                                                    
+$HIC$      $NOR$$HIB$/\$NOR$                       $HIK$- NTOS Support Epoll-Current-64bits, NTlib V5.1g -$NOR$
+$HIB$     (/\)$NOR$                                                                     
+$HIB$      |                          $NOR$$HIW$èª°  ç¸±  åƒ  æ•‘  çœ¼  ä¸‰  å°‡  é–‘  äº‹  å  éŠ€  è¶™$NOR$       
+$HIB$      |$NOR$$HIY$                      $NOR$$HIW$èƒ½  æ­»  ç§‹  è¶™  èŠ±  æ¯  ç‚™  éŽ  äº†  æ­¥  éž  å®¢$NOR$       
+$HIB$      |$NOR$$HIY$ \ (       $NOR$$HIR$         $NOR$$HIW$æ›¸  ä¿   äºŒ  æ®  è€³  å  å•–  ä¿¡  æ‹‚  æ®º  ç…§  ç¸µ$NOR$       
+$HIB$      |$NOR$$HIY$     $NOR$$HIR$æ±Ÿç¬‘       $NOR$$HIW$é–£  éª¨  å£¯  é‡‘  ç†±  ç„¶  æœ±  é™µ  è¡£  ä¸€  ç™½  èƒ¡$NOR$             
+$HIB$      |$NOR$$HIY$       $NOR$$HIR$æ¹–å‚²       $NOR$$HIW$ä¸‹  é¦™  å£«  æ§Œ  å¾Œ  è«¾  äº¥  é£²  åŽ»  äºº  é¦¬  çº“$NOR$             
+$HIB$      |$NOR$$HIY$        $NOR$$HIR$             $NOR$$HIW$                                               $NOR$             
+$HIB$      |$NOR$$HIY$                      $NOR$$HIW$ç™½  ä¸    é‚¯  æ„  äº”  æŒ  è„«  æ·±  åƒ  é¢¯  å³$NOR$                   
+$HIB$      |$NOR$$HIY$                      $NOR$$HIW$é¦–  æ…š  èµ«  é„²  æ°£  å²³  è§´  åŠ  è—  é‡Œ  æ²“  é‰¤$NOR$
+$HIC$      $NOR$$HIB$|$NOR$$HIC$             $NOR$$HIY$     $NOR$$HIW$    å¤ª  ä¸–  å¤§  å…ˆ  ç´   å€’  å‹¸  è†  èº«  ä¸  å¦‚  éœœ$NOR$
+$HIB$      |               $NOR$$HIY$       $NOR$$HIW$çŽ„  ä¸Š  æ¢  éœ‡  éœ“  ç‚º  å€™  å‰  èˆ‡  ç•™  æµ  é›ª$NOR$
+$HIB$      |                $NOR$ $HIY$     $NOR$$HIW$ç¶“  è‹±  åŸŽ  é©š  ç”Ÿ  è¼•  è´  æ©«  å  è¡Œ  æ˜Ÿ  æ˜Ž$NOR$
+$HIB$      /                  $NOR$ $HIY$\ $NOR$
                                                                                 
-$HIW$¡õ  QQÈº:46899981($NOR$$HIR$ÒÑÂú$NOR$$HIW$) 144861910($NOR$$HIY$Î´Âú$NOR$$HIW$)
+$HIW$â–¡  QQç¾¤:46899981($NOR$$HIR$å·²æ»¿$NOR$$HIW$) 144861910($NOR$$HIY$æœªæ»¿$NOR$$HIW$)
 
-$HIR$¡õ$NOR$  ±¾ÓÎÏ·½ö¹©ÐÝÏÐÓéÀÖ£¬ÇÐÎð³ÁÃÔÆäÖÐ£¬ÏÖÊµÊÀ½çÖÐ»¹ÓÐÐí¶àÃÀºÃÊÂÎïµÈÖøÄú
+$HIR$â–¡$NOR$  æœ¬éŠæˆ²åƒ…ä¾›ä¼‘é–‘å¨›æ¨‚ï¼Œåˆ‡å‹¿æ²‰è¿·å…¶ä¸­ï¼Œç¾å¯¦ä¸–ç•Œä¸­é‚„æœ‰è¨±å¤šç¾Žå¥½äº‹ç‰©ç­‰è‘—æ‚¨
 $HIK$_______________________________________________________________________________$NOR$
 

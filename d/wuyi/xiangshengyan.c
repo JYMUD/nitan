@@ -5,11 +5,11 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "������");
+        set("short", "響聲岩");
         set("long", @LONG
-λ������Ϫ�ϵ������ң������³Ǹߡ����пչȴ����ĸ�Ӧ������
-�����ҡ������ּ���������˹�������ڴˣ�Ϊ����ɽ�����Ħ��ʯ�̡�
-��Ϫб���棬���������ˡ�
+位於六曲溪南的響聲岩，又名下城高。因有空谷傳聲的感應，故名
+響聲岩。朱熹手跡“逝者如斯”四字於此，為武夷山最早的摩崖石刻。
+隔溪斜對面，就是雲窩了。
 LONG );
         set("outdoors", "wuyi");
         set("no_clean_up", 0);

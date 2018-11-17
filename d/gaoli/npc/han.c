@@ -1,16 +1,16 @@
-// ´óÌÆË«Áú´«
+// å¤§å”é›™é¾å‚³
  
-// han.c º«ÀÏ°å
+// han.c éŸ“è€é—†
 
 inherit NPC;
 inherit F_DEALER;
 
 void create()
 {
-       set_name("º«ÀÏ°å", ({"han baoban","han","laoban"}));
+       set_name("éŸ“è€é—†", ({"han baoban","han","laoban"}));
        set("shop_id",({"han baoban","han","laoban"}));
-       set("shop_title","Ì«°×¾ÆÂ¥ÀÏ°å");
-       set("gender", "ÄĞĞÔ");
+       set("shop_title","å¤ªç™½é…’æ¨“è€é—†");
+       set("gender", "ç”·æ€§");
         set("combat_exp", 100000);
        set("age", 26);
        set("per", 14);

@@ -9,9 +9,9 @@ int update_condition(object me, int duration)
         {
                 me->move("/d/shaolin/guangchang1");
                 message("vision",
-                        HIY "ֻ��ƹ��һ����������һ��������һ����\n"
-                        "ԭ����һ���������ļһ�Ӵ����ﱻ���˳�����\n" NOR, environment(me), me);
-                tell_object(me, HIY "ֻ��һ�����Ƽ����㣬��������ر��ӳ��������£�\n" NOR);
+                        HIY "只聽乒地一聲，你嚇了一跳，定睛一看，\n"
+                        "原來是一個昏昏沉沉的傢伙從大門裡被扔了出來！\n" NOR, environment(me), me);
+                tell_object(me, HIY "只覺一陣騰雲駕霧般，你昏昏沉沉地被扔出了少林寺！\n" NOR);
                 me->set("startroom", START_ROOM);
                 return 0;
         }

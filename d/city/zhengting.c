@@ -5,10 +5,10 @@ inherit ROOM;
 
 void create()
 {
-	set("short", "����");
+	set("short", "正廳");
         set("long", @LONG
-�����Ǹ����ھֵ���������ֻ̫ʦ��һ���ſ�����������������
-ͷ���ֳ��̴������ڱ�Ŀ��˼��ǽ�Ϲ��ż����ֻ���һ�ѱ�����
+這裡是福威鏢局的正廳，幾隻太師椅一字排開，正中央坐着總鏢
+頭，手持煙袋桿正在閉目沉思。牆上掛着幾幅字畫和一把寶劍。
 LONG );
 	set("exits", ([
 		"north" : __DIR__"biaoju",

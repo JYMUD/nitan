@@ -1,18 +1,18 @@
-// jin. ½ğÀÏ°å
+// jin. é‡‘è€é—†
 
 inherit NPC;
 inherit F_DEALER;
 
 void create()
 {
-        set_name("½ğÀÏ°å", ({ "jin laoban", "jin" }));
-        set("title", "ËÉº×Â¥ÀÏ°å");
+        set_name("é‡‘è€é—†", ({ "jin laoban", "jin" }));
+        set("title", "æ¾é¶´æ¨“è€é—†");
         set("shen_type", 1);
 
         set("str", 20);
-        set("gender", "ÄĞĞÔ");
+        set("gender", "ç”·æ€§");
         set("age", 45);
-        set("long", "½ğÀÏ°å¾­Óª×æ´«ÏÂÀ´µÄËÉº×Â¥ÒÑÓĞ¶àÄê¡£\n");
+        set("long", "é‡‘è€é—†ç¶“ç‡Ÿç¥–å‚³ä¸‹ä¾†çš„æ¾é¶´æ¨“å·²æœ‰å¤šå¹´ã€‚\n");
         set("combat_exp", 50000);
         set("qi", 300);
         set("max_qi", 300);

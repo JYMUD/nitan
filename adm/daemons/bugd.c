@@ -27,7 +27,7 @@ void reset_buginfo()
                 buginfo += ({ restore_variable(read_file(DATA_PATH+file)) });
 }
 
-// ÁĞ³ö Bug ÁĞ±í
+// åˆ—å‡º Bug åˆ—è¡¨
 string list_bug(int options)
 {
         int len;
@@ -45,10 +45,10 @@ string list_bug(int options)
                 list_buginfo = buginfo;
 
         list_buginfo = sort_array(list_buginfo, (: (to_int($1["number"]) < to_int($2["number"])) ? 1 : -1 :));
-        listmsg =  "\n"+MUD_FULL_NAME+HIY" ³ô³æ»Ø±¨ÏµÍ³\n"NOR;
-        listmsg += WHT"©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤\n"NOR;
-        listmsg += "±àºÅ »Ø±¨Õß                   Ö÷Ìâ                          ´¦Àí×´Ì¬  »ØÓ¦\n";
-        listmsg += WHT"©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤\n"NOR;
+        listmsg =  "\n"+MUD_FULL_NAME+HIY" è‡­èŸ²å›å ±ç³»çµ±\n"NOR;
+        listmsg += WHT"â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\n"NOR;
+        listmsg += "ç·¨è™Ÿ å›å ±è€…                   ä¸»é¡Œ                          è™•ç†ç‹€æ…‹  å›æ‡‰\n";
+        listmsg += WHT"â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\n"NOR;
 
         foreach( mapping data in list_buginfo )
         {
@@ -61,23 +61,23 @@ string list_bug(int options)
                                    data["author_idname"], data["title"], data["status"],
                                    sizeof(data["reply"]) ? sizeof(data["reply"])+"" : "");
         }
-        listmsg += WHT"©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤\n"NOR;
+        listmsg += WHT"â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\n"NOR;
 
         if( options & LIST_OPT_ALL )
-                listmsg += "ÁĞ³öËùÓĞ»Ø±¨×ÊÁÏ\n";
+                listmsg += "åˆ—å‡ºæ‰€æœ‰å›å ±è³‡æ–™\n";
         else
-                listmsg += "ÁĞ³ö×î½ü "+DEFAULT_LOAD+" Ïî»Ø±¨×ÊÁÏ\n";
+                listmsg += "åˆ—å‡ºæœ€è¿‘ "+DEFAULT_LOAD+" é …å›å ±è³‡æ–™\n";
 
         return listmsg;
 }
 
-// ĞÂÔö Bug ×ÊÁÏ
+// æ–°å¢ Bug è³‡æ–™
 string add_bug(object me, string title, string content)
 {
         mapping bugdata = allocate_mapping(0);
 
         if( !objectp(me) || !stringp(title) || !stringp(content) )
-                error("BUG_D add_bug() ´íÎóÊäÈë²ÎÊı");
+                error("BUG_D add_bug() éŒ¯èª¤è¼¸å…¥åƒæ•¸");
 
         bugdata["time"] = time();
         bugdata["where"] = base_name(environment(me));
@@ -89,7 +89,7 @@ string add_bug(object me, string title, string content)
         bugdata["title"] = title;
         bugdata["content"] = content;
 
-        bugdata["status"] = HIR"Î´´¦Àí"NOR;
+        bugdata["status"] = HIR"æœªè™•ç†"NOR;
 
         bugdata["reply"] = allocate(0);
 
@@ -97,28 +97,28 @@ string add_bug(object me, string title, string content)
         if( write_file(DATA_PATH+bugdata["number"], save_variable(bugdata)) )
                 reset_buginfo();
         else
-                error("BUG_D ÎŞ·¨´¢´æĞÂÔö bug ×ÊÁÏ");
+                error("BUG_D ç„¡æ³•å„²å­˜æ–°å¢ bug è³‡æ–™");
 
-        CHANNEL_D->channel_broadcast("sys", HIW+me->query_idname()+HIW"ĞÂÔö Bug »Ø±¨£¬¡°"+title+NOR+HIW"¡±£¬±àºÅ£º"+bugdata["number"]+"¡£");
+        CHANNEL_D->channel_broadcast("sys", HIW+me->query_idname()+HIW"æ–°å¢ Bug å›å ±ï¼Œâ€œ"+title+NOR+HIW"â€ï¼Œç·¨è™Ÿï¼š"+bugdata["number"]+"ã€‚");
 
         return bugdata["number"];
 }
 
-// »ØÓ¦ Bug ´¦ÀíÇéĞÎ
+// å›æ‡‰ Bug è™•ç†æƒ…å½¢
 varargs void reply_bug(object me, string number, string status, string message)
 {
         mapping data;
 
         if( !bug_exists(number) )
-                error("BUG_D reply_bug() ÎŞ´Ëµµ°¸");
+                error("BUG_D reply_bug() ç„¡æ­¤æª”æ¡ˆ");
         else
                 data = restore_variable(read_file(DATA_PATH+number));
 
         data["status"] = status;
-        CHANNEL_D->channel_broadcast("sys", me->query_idname()+"ĞŞ¸Ä±àºÅµÚ "+number+" ºÅ Bug ´¦Àí×´¿öÎª¡°"+status+"¡±");
+        CHANNEL_D->channel_broadcast("sys", me->query_idname()+"ä¿®æ”¹ç·¨è™Ÿç¬¬ "+number+" è™Ÿ Bug è™•ç†ç‹€æ³ç‚ºâ€œ"+status+"â€");
 
         if( find_player(data["author_id"]) )
-                tell_object(find_player(data["author_id"]), me->query_idname()+"»ØÓ¦±àºÅµÚ "+number+" ºÅ Bug ´¦Àí×´¿öÎª¡°"+status+"¡±¡£\n");
+                tell_object(find_player(data["author_id"]), me->query_idname()+"å›æ‡‰ç·¨è™Ÿç¬¬ "+number+" è™Ÿ Bug è™•ç†ç‹€æ³ç‚ºâ€œ"+status+"â€ã€‚\n");
 
         if( !undefinedp(message) )
         {
@@ -126,28 +126,28 @@ varargs void reply_bug(object me, string number, string status, string message)
                         data["reply"] = allocate(0);
 
                 data["reply"] += ({ ({ me->query_idname(), message }) });
-                CHANNEL_D->channel_broadcast("sys", me->query_idname()+"ÊäÈë±àºÅµÚ "+number+" ºÅ Bug ´¦Àí»ØÓ¦");
+                CHANNEL_D->channel_broadcast("sys", me->query_idname()+"è¼¸å…¥ç·¨è™Ÿç¬¬ "+number+" è™Ÿ Bug è™•ç†å›æ‡‰");
         }
 
         write_file(DATA_PATH+number, save_variable(data), 1);
         reset_buginfo();
 }
 
-// ÒÆ³ı Bug ×ÊÁÏ
+// ç§»é™¤ Bug è³‡æ–™
 varargs void remove_bug(object me, string number, int reply)
 {
         if( !bug_exists(number) )
-                error("BUG_D remove_bug() ÎŞ´Ëµµ°¸");
+                error("BUG_D remove_bug() ç„¡æ­¤æª”æ¡ˆ");
 
-        // É¾³ıÕû¸ö Bug ×ÊÑ¶
+        // åˆªé™¤æ•´å€‹ Bug è³‡è¨Š
         if( undefinedp(reply) )
         {
                 if( !rm(DATA_PATH+number) )
-                        error("BUG_D remove_bug() ÎŞ·¨É¾³ıµµ°¸");
+                        error("BUG_D remove_bug() ç„¡æ³•åˆªé™¤æª”æ¡ˆ");
 
                 reset_buginfo();
         }
-        // É¾³ıÆäÖĞÒ»¸ö»ØÓ¦×ÊÁÏ
+        // åˆªé™¤å…¶ä¸­ä¸€å€‹å›æ‡‰è³‡æ–™
         else
         {
                 mapping data = restore_variable(read_file(DATA_PATH+number));
@@ -167,7 +167,7 @@ varargs void remove_bug(object me, string number, int reply)
         }
 }
 
-// ²éÑ¯ Bug ×ÊÁÏ
+// æŸ¥è©¢ Bug è³‡æ–™
 string query_bug(string number)
 {
         string bugmsg;
@@ -175,7 +175,7 @@ string query_bug(string number)
         int len;
 
         if( !bug_exists(number) )
-                error("BUG_D query_bug() ÎŞ´Ëµµ°¸");
+                error("BUG_D query_bug() ç„¡æ­¤æª”æ¡ˆ");
         else
                 data = restore_variable(read_file(DATA_PATH+number));
 
@@ -185,11 +185,11 @@ string query_bug(string number)
                 len = color_len(data["status"]);
 #endif
 
-        bugmsg =  sprintf(HIM"±àºÅ"NOR" %-20s "HIM"Ö÷Ìâ"NOR" %s\n"NOR, data["number"], data["title"]);
-        bugmsg += sprintf(HIM"Ê±¼ä"NOR" %-20s "HIM"»Ø±¨"NOR" %s\n", TIME_D->replace_ctime(data["time"]), data["author_idname"]);
-        bugmsg += sprintf(HIM"×´¿ö"NOR" %-"+(20+len)+"s "HIM"»ØÓ¦"NOR" %d\n", data["status"], sizeof(data["reply"]));
-        bugmsg += sprintf(HIM"µØµã"NOR" %s\n", data["where"]);
-        bugmsg += WHT"©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤\n"NOR;
+        bugmsg =  sprintf(HIM"ç·¨è™Ÿ"NOR" %-20s "HIM"ä¸»é¡Œ"NOR" %s\n"NOR, data["number"], data["title"]);
+        bugmsg += sprintf(HIM"æ™‚é–“"NOR" %-20s "HIM"å›å ±"NOR" %s\n", TIME_D->replace_ctime(data["time"]), data["author_idname"]);
+        bugmsg += sprintf(HIM"ç‹€æ³"NOR" %-"+(20+len)+"s "HIM"å›æ‡‰"NOR" %d\n", data["status"], sizeof(data["reply"]));
+        bugmsg += sprintf(HIM"åœ°é»"NOR" %s\n", data["where"]);
+        bugmsg += WHT"â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\n"NOR;
         bugmsg += data["content"]+"\n";
 
         if( sizeof(data["reply"]) )
@@ -199,12 +199,12 @@ string query_bug(string number)
                 foreach( string *reply in data["reply"] )
                 {
                         replies++;
-                        bugmsg += HIY"\n\n*** µÚ "+replies+" Æª»ØÓ¦£º"+reply[REPLY_AUTHOR]+HIY+" ***\n"NOR;
+                        bugmsg += HIY"\n\n*** ç¬¬ "+replies+" ç¯‡å›æ‡‰ï¼š"+reply[REPLY_AUTHOR]+HIY+" ***\n"NOR;
                         bugmsg += reply[REPLY_MESSAGE]+NOR"\n";
                 }
         }
 
-        bugmsg += WHT"©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤\n"NOR;
+        bugmsg += WHT"â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\n"NOR;
 
         return bugmsg;
 }
@@ -215,5 +215,5 @@ void create()
 }
 string query_name()
 {
-        return "³ô³æ»Ø±¨ÏµÍ³(BUG_D)";
+        return "è‡­èŸ²å›å ±ç³»çµ±(BUG_D)";
 }

@@ -5,10 +5,10 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "����");
+        set("short", "後廳");
         set("long", @long
-������ׯ�����÷���Ϣ�ĵط����ĽǸ�����һ���̿��һ�Ű���
-�����У���Χ��ɨ�����Ǹɾ����ܼ����ں������ǷԸ���ʲô��
+這裡是庄內人用飯休息的地方，四角各生着一盆大炭火，一張八仙
+桌居中，周圍打掃得甚是乾淨。管家正在和下人們吩咐着什麼。
 long );
         set("exits", ([
                 "west"  : __DIR__"zoulang5",

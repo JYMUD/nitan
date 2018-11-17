@@ -7,11 +7,11 @@ void create()
 {
         int i;
         object girl;
-        set("short", "¹ÈÖÐ");
+        set("short", "è°·ä¸­");
         set("long", @LONG
-ÏªÁ÷òêÑÑÈç´ø£¬ÖìÀ¸ºá¿çË®ÉÏ£¬¼¸Ö»ÈéÑàÔÚ»¨ÁÖÖÐ·ÉÐýÀ´È¥¡£²Ý
-ÆºÉÏÍÁ¶Õ¼ä£¬Ð±×ø×Å¼¸¸öÅû·¢ÉÙÅ®£¬»òÅûÇáÉ´£¬»ò×ÅÈáÅÛ£¬¶¼ÔÚÓ¯Ó¯
-Ç³Ð¦£¬Á÷íøµÍÓï¡£
+æºªæµèœ¿èœ’å¦‚å¸¶ï¼Œæœ±æ¬„æ©«è·¨æ°´ä¸Šï¼Œå¹¾éš»ä¹³ç‡•åœ¨èŠ±æž—ä¸­é£›æ—‹ä¾†åŽ»ã€‚è‰
+åªä¸ŠåœŸå¢©é–“ï¼Œæ–œåç€å¹¾å€‹æŠ«é«®å°‘å¥³ï¼Œæˆ–æŠ«è¼•ç´—ï¼Œæˆ–ç€æŸ”è¢ï¼Œéƒ½åœ¨ç›ˆç›ˆ
+æ·ºç¬‘ï¼Œæµçœ¸ä½Žèªžã€‚
 LONG );
         set("exits", ([ /* sizeof() == 4 */
                 "south" : __DIR__"gu0",

@@ -3,9 +3,9 @@ inherit WAITER;
 
 void create()
 {
-        set_name("µêÆÌ»ï¼Æ", ({ "huo ji", "huo", "ji" }));
-        set("long", "Ëû¾ÍÊÇÕâ¼ÒµêÆÌµÄ»ï¼Æ¡£\n");
-        set("gender", "ÄÐÐÔ");
+        set_name("åº—é‹ªå¤¥è¨ˆ", ({ "huo ji", "huo", "ji" }));
+        set("long", "ä»–å°±æ˜¯é€™å®¶åº—é‹ªçš„å¤¥è¨ˆã€‚\n");
+        set("gender", "ç”·æ€§");
         set("age", random(10) + 20);
 
         setup();

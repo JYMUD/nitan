@@ -1,14 +1,14 @@
-//menwei.c                �Ĵ����š��
+//menwei.c                四川唐門―差房
 
 inherit ROOM;
 
 void create()
 {
-        set("short", "�");
+        set("short", "差房");
         set("long",
-"��������źС���Ĳ��ƽ�����ŵ������Ƕ�ϲ����������Ƚϸ���\n"
-"���˵��书�ߵͣ������ɲ�ҪС����Щ���ˣ�����Ҳ�������֡���������\n"
-"��ͤ�ˮ��\n"
+"這裡是蓮藕小築的差房。平常唐門的下人們都喜歡聚在這裡比較各自\n"
+"主人的武功高低，不過可不要小瞧這些下人，其中也不乏高手。這裡往東\n"
+"是亭榭水閣。\n"
 );
         set("exits", ([        "east" : __DIR__"shuige1",]));
         set("objects", ([__DIR__"npc/menwei" : 2,]));

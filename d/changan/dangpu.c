@@ -4,22 +4,22 @@ inherit ROOM;
 
 void create ()
 {
-        set ("short", "Ïô¼Çµ±ÆÌ");
+        set ("short", "è•­è¨˜ç•¶é‹ª");
         set("long", @LONG
-ÕâÊÇ³¤°²³ÇÀï×î´óµÄÒ»¼Òµ±ÆÌÁË¡£ËØÀ´ÒÔÂòÂô¹«Æ½Öø³Æ¡£ÃÅ¿Ú¹Ò
-ÁËÒ»¿éÅÆ×Ó (paizi)¡£Ò»¸öÈý³ß¸ßµÄ¹ñÌ¨µ²ÔÚÄãµÄÃæÇ°£¬¹ñÌ¨ºó×ø×Å
-ÕÆ¹ñµÄ·ëÀÏ°å£¬¼ûÄã×ßÁË½øÀ´£¬Ò»Ë«¾«Ã÷µÄÑÛ¾¦ÉÏÉÏÏÂÏÂ´òÁ¿×ÅÄã¡£
+é€™æ˜¯é•·å®‰åŸŽè£¡æœ€å¤§çš„ä¸€å®¶ç•¶é‹ªäº†ã€‚ç´ ä¾†ä»¥è²·è³£å…¬å¹³è‘—ç¨±ã€‚é–€å£æŽ›
+äº†ä¸€å¡Šç‰Œå­ (paizi)ã€‚ä¸€å€‹ä¸‰å°ºé«˜çš„æ«ƒæª¯æ“‹åœ¨ä½ çš„é¢å‰ï¼Œæ«ƒæª¯å¾Œåç€
+æŽŒæŸœçš„é¦®è€é—†ï¼Œè¦‹ä½ èµ°äº†é€²ä¾†ï¼Œä¸€é›™ç²¾æ˜Žçš„çœ¼ç›ä¸Šä¸Šä¸‹ä¸‹æ‰“é‡ç€ä½ ã€‚
 LONG );
         set("exits", ([ /* sizeof() == 1 */
                 "north" : "/d/changan/qixiang3",
         ]));
         set("item_desc", ([
-                "paizi" : "¹«Æ½½»Ò×\n
-sell        Âô 
-buy         Âò
-pawn        µ±
-expiate     Êê
-value       ¹À¼Û
+                "paizi" : "å…¬å¹³äº¤æ˜“\n
+sell        è³£ 
+buy         è²·
+pawn        ç•¶
+expiate     è´–
+value       ä¼°åƒ¹
 ",
         ]));
 

@@ -7,10 +7,10 @@
 inherit F_CLEAN_UP;
 
 string help = @HELP
-ÁĞ³ö¸÷ÖÖÅÅĞĞ°ñ£º
+åˆ—å‡ºå„ç¨®æ’è¡Œæ¦œï¼š
 
-top gaoshou             - ÊÀ½ç¸ßÊÖÅÅĞĞ°ñ
-top average             - ÊÀ½ç¸ßÊÖÁ·¹¦ËÙ¶ÈÅÅĞĞ°ñ
+top gaoshou             - ä¸–ç•Œé«˜æ‰‹æ’è¡Œæ¦œ
+top average             - ä¸–ç•Œé«˜æ‰‹ç·´åŠŸé€Ÿåº¦æ’è¡Œæ¦œ
 HELP;
 
 int top_list(object ob1,object ob2);
@@ -27,7 +27,7 @@ int main(object me, string arg)
         string *res;
 
         if( time()-query_temp("last_top", me)<10 )
-              return notify_fail("ÏµÍ³Æø´­ĞêµØÌ¾µÀ£ºÂıÂıÀ´ ....\n");
+              return notify_fail("ç³»çµ±æ°£å–˜å™“åœ°å˜†é“ï¼šæ…¢æ…¢ä¾† ....\n");
 
         if( !wizardp(me) )
                 set_temp("last_top", time(), me);
@@ -61,60 +61,60 @@ int main(object me, string arg)
         }
 
         if( n < 1 || n > 200 )
-                return notify_fail("ÏÔÊ¾ÅÅÃûÊıÁ¿²»µÃĞ¡ÓÚ 1 »ò´óÓÚ 200¡£\n");
+                return notify_fail("é¡¯ç¤ºæ’åæ•¸é‡ä¸å¾—å°æ–¼ 1 æˆ–å¤§æ–¼ 200ã€‚\n");
 
         switch( arg1 )
         {
         case "average":
-                if( !wizardp(me) ) return notify_fail("Á·¹¦¿ñÈËÅÅÃû²éÑ¯¹¦ÄÜ²»¶ÔÍæ¼Ò¿ª·Å¡£\n");
-                msg = NOR YEL"ÊÀ½ç"HIY"Ç° "+n+" Á·¹¦¿ñÈË"NOR YEL"ÅÅĞĞ°ñ£º\n"NOR;
-                msg += NOR WHT"©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤\n"NOR;
-                msg += sprintf(HIW"%4s %-28s %-12s %12s %12s\n"NOR, "ÅÅÃû", "Íæ¼Ò", "¾­Ñé", "Ç±ÄÜ", "Ìå»á");
-                msg += NOR WHT"©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤\n"NOR;
+                if( !wizardp(me) ) return notify_fail("ç·´åŠŸç‹‚äººæ’åæŸ¥è©¢åŠŸèƒ½ä¸å°ç©å®¶é–‹æ”¾ã€‚\n");
+                msg = NOR YEL"ä¸–ç•Œ"HIY"å‰ "+n+" ç·´åŠŸç‹‚äºº"NOR YEL"æ’è¡Œæ¦œï¼š\n"NOR;
+                msg += NOR WHT"â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\n"NOR;
+                msg += sprintf(HIW"%4s %-28s %-12s %12s %12s\n"NOR, "æ’å", "ç©å®¶", "ç¶“é©—", "æ½›èƒ½", "é«”æœƒ");
+                msg += NOR WHT"â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€\n"NOR;
 
                 ob = filter_array(users(), (: playerp($1) && living($1) && !wizardp($1) :));
                 list = sort_array(ob, (: top_average :));
                 for (i = 0 ;i < n ; i++)
                 {
                         if( i >= sizeof(list))
-                                msg += sprintf("©¦  %-5s ÔİÊ±¿ÕÈ±¡£¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡©¦\n"NOR,chinese_number(i+1));
+                                msg += sprintf("â”‚  %-5s æš«æ™‚ç©ºç¼ºã€‚ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€â”‚\n"NOR,chinese_number(i+1));
                         else {
                                 res = query_temp("average", list[i]);
                                 if( list[i] == me ) msg += BBLU HIY;
-                                msg+=sprintf("©¦%-5s%-22s%-12d%12d%12d©¦\n"NOR,chinese_number(i+1),query("name", list[i])+"("+
+                                msg+=sprintf("â”‚%-5s%-22s%-12d%12d%12dâ”‚\n"NOR,chinese_number(i+1),query("name", list[i])+"("+
                                                         capitalize(query("id", list[i]))+")",
                                                         res[0],
                                                         res[1],
                                                         res[2]);
                         }
                 }
-                msg += "©¸©¤©¤©¤Î×Ê¦¡¢¶ÏÏß¡¢Ë¯Ãß¡¢»èÃÔ¾ù²»½øÈëÅÅÃû°ñ©¤©¤©¤©¼\n";
-                msg += "  " + NATURE_D->game_time() + "¼Ç¡£\n";
+                msg += "â””â”€â”€â”€å·«å¸«ã€æ–·ç·šã€ç¡çœ ã€æ˜è¿·å‡ä¸é€²å…¥æ’åæ¦œâ”€â”€â”€â”˜\n";
+                msg += "  " + NATURE_D->game_time() + "è¨˜ã€‚\n";
                 write(msg);
                 break;
         case "gaoshou":
                 ob = filter_array(users(), (: playerp($1) && living($1) && !wizardp($1) :));
                 list = sort_array(ob, (: top_list :));
-                msg = HIR "\n\t  ======== Ğ¦°Á½­ºşÔÚÏß¸ßÊÖÅÅĞĞ°ñ ========\n" NOR;
+                msg = HIR "\n\t  ======== ç¬‘å‚²æ±Ÿæ¹–åœ¨ç·šé«˜æ‰‹æ’è¡Œæ¦œ ========\n" NOR;
                 msg += HIR "\t  /                                      \\\n" NOR;   
-                msg += sprintf(HIY "%-10s%-20s%-22s%-20s\n" NOR, "¸ßÊÖÅÅÃû", "×ğĞÕ´óÃû", "ËùÊôÃÅÅÉ", "ÆÀ¼Û");
+                msg += sprintf(HIY "%-10s%-20s%-22s%-20s\n" NOR, "é«˜æ‰‹æ’å", "å°Šå§“å¤§å", "æ‰€å±¬é–€æ´¾", "è©•åƒ¹");
                 msg += HIM "---------------------------------------------------------------\n"NOR;
                 for (i = 0 ;i < n ; i++)
                 {
                         if( i >= sizeof(list))
-                                msg += sprintf(HIW"   %-7s ÔİÊ±¿ÕÈ±¡£¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡\n"NOR,chinese_number(i+1));
+                                msg += sprintf(HIW"   %-7s æš«æ™‚ç©ºç¼ºã€‚ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€\n"NOR,chinese_number(i+1));
                         else {
                                 if( list[i] == me ) msg += BBLU HIY;
                                 msg+=sprintf(HIW"   %-7s%-20s%-22s%-20s\n"NOR,chinese_number(i+1),query("name", list[i])+"("+
                                                         capitalize(query("id", list[i]))+")",
-                                                        query("family/family_name", list[i])?list[i]->query_family():"ÆÕÍ¨°ÙĞÕ",
-                                                        "²»±ãÍ¸Â¶");
+                                                        query("family/family_name", list[i])?list[i]->query_family():"æ™®é€šç™¾å§“",
+                                                        "ä¸ä¾¿é€éœ²");
                         }
                 }
                 msg += HIM "---------------------------------------------------------------\n"NOR;
                 msg += HIR "\t  \\                                      /\n" NOR;
                 msg += HIR "\t  ========================================\n" NOR;
-                msg += HIC + NATURE_D->game_time() + "¼Ç¡£\n" NOR;
+                msg += HIC + NATURE_D->game_time() + "è¨˜ã€‚\n" NOR;
                 write(msg);
                 break;
         default:

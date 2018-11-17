@@ -3,11 +3,11 @@ inherit TRANS_ROOM;
 
 void create()
 {
-        set("short", "ÌÆÃÅæäÕ¾");
+        set("short", "å”é–€é©›ç«™");
         set("long",
-"ÕâÊÇÒ»¼äÓÃÄ¾°å´Ó´óÄ¾Åï¸ô³öµÄÒ»¼äÐ¡·¿£¬×°ÊÎµÄ»¹Ëã²»´í£¬Ò»¸öÐ¦\n"
-"ÎûÎûµÄ»ï¼ÆÕ¾ÔÚÄÇÀï£¬¼ûÄã½øÀ´Á¬Ã¦ÉÏÀ´ÕÐºô£¬¹ñÌ¨²àÃæÓÐÒ»¸ö´óÃÅ£¬ÃÅ\n"
-"ÐéÑÚ×Å£¬ÀïÃæ´«À´ÂíµÄË»ÃùÉù£¬Èç¹ûÄãÏë×ø³µ£¬¾Í¿´¿´(paizi)°É¡£\n"
+"é€™æ˜¯ä¸€é–“ç”¨æœ¨æ¿å¾žå¤§æœ¨æ£šéš”å‡ºçš„ä¸€é–“å°æˆ¿ï¼Œè£é£¾çš„é‚„ç®—ä¸éŒ¯ï¼Œä¸€å€‹ç¬‘\n"
+"å˜»å˜»çš„å¤¥è¨ˆç«™åœ¨é‚£è£¡ï¼Œè¦‹ä½ é€²ä¾†é€£å¿™ä¸Šä¾†æ‹›å‘¼ï¼Œæ«ƒæª¯å´é¢æœ‰ä¸€å€‹å¤§é–€ï¼Œé–€\n"
+"è™›æŽ©ç€ï¼Œè£¡é¢å‚³ä¾†é¦¬çš„å˜¶é³´è²ï¼Œå¦‚æžœä½ æƒ³åè»Šï¼Œå°±çœ‹çœ‹(paizi)å§ã€‚\n"
 );
 
         set("valid_startroom", 1);
@@ -19,7 +19,7 @@ void create()
                 "/d/tangmen/npc/tmxer" : 1,
         ]));
 
-        set("area", "ÌÆÃÅ");
+        set("area", "å”é–€");
         set("che_id", "tmmache");
 
         setup();

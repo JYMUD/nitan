@@ -3,13 +3,13 @@ inherit NPC;
 
 void create()
 {
-        set_name("ÃÛ·ä", ({ "bee" }) );
-        set("race", "À¥³æ");
-        set("subrace", "·É³æ");
+        set_name("èœœèœ‚", ({ "bee" }) );
+        set("race", "æ˜†èŸ²");
+        set("subrace", "é£›èŸ²");
         set("age", 1);
-        set("long", "Ò»Ö»·è¿ñµÄÉ±ÈË·ä¡£\n");
+        set("long", "ä¸€éš»ç˜‹ç‹‚çš„æ®ºäººèœ‚ã€‚\n");
 
-        set("limbs", ({ "Í·²¿", "ÉíÌå", "Î²°Í" }) );
+        set("limbs", ({ "é ­éƒ¨", "èº«é«”", "å°¾å·´" }) );
         set("verbs", ({ "bite" }) );
 
         set_skill("dodge", 50);

@@ -1,7 +1,7 @@
-¡õ efun_main.c 
+â–¡ efun_main.c 
 
-ÈÃ efun match_path() ¾ßÓĞ '/' Â·¾¶ËÑÑ°¹¦ÄÜ
-¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D
+è®“ efun match_path() å…·æœ‰ '/' è·¯å¾‘æœå°‹åŠŸèƒ½
+
 #ifdef F_MATCH_PATH
 void f_match_path PROT((void))
 {
@@ -48,10 +48,10 @@ void f_match_path PROT((void))
     free_mapping(map);
 }
 #endif                          /* F_MATCH_PATH */
-¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D
 
-ÈÃ efun this_player() ¿É»Ø´« call_out() µÄ command_giver
-¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D
+
+è®“ efun this_player() å¯å›å‚³ call_out() çš„ command_giver
+
 #ifdef F_THIS_PLAYER
 void
 f_this_player PROT((void))
@@ -69,7 +69,7 @@ f_this_player PROT((void))
     }
 }
 #endif
-¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D¨D
 
-By Clode@RW on 2002/6/3 04:01ÏÂÎç
+
+By Clode@RW on 2002/6/3 04:01ä¸‹åˆ
 

@@ -1,4 +1,4 @@
-// Éñ»°ÊÀ½ç¡¤Î÷ÓÎ¼Ç¡¤°æ±¾£´£®£µ£°
+// ç¥è©±ä¸–ç•Œãƒ»è¥¿éŠè¨˜ãƒ»ç‰ˆæœ¬ï¼”ï¼ï¼•ï¼
 /* <SecCrypt CPL V3R05> */
  
 // songguo.c
@@ -8,13 +8,13 @@ inherit F_FOOD;
 
 void create()
 {
-        set_name("ËÉ¹û", ({"songguo"}));
+        set_name("æ¾æœ", ({"songguo"}));
         set_weight(80);
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("long", "Ò»¸öºÚÉ«µÄËÉ¹û£®\n");
-                set("unit", "¸ö");
+                set("long", "ä¸€å€‹é»‘è‰²çš„æ¾æœï¼\n");
+                set("unit", "å€‹");
                 set("food_remaining", 1);
                 set("food_supply", 60);
         }

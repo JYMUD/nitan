@@ -7,13 +7,13 @@ inherit F_FOOD;
 
 void create()
 {
-        set_name(HIG"р╟ки╧Ш"NOR, ({"guo", "song guo"}));
+        set_name(HIG"И┤▌Ф²╬Ф·°"NOR, ({"guo", "song guo"}));
         set_weight(40);
         if (clonep())
                 set_default_object(__FILE__);
         else {
-                set("long", "р╩©е╢сажвсюО╡ию╢╣др╟ки╧Ш║ё\n");
-                set("unit", "©е");
+                set("long", "Д╦─И║├Е╬·Ф·≈Е╜░И┤▄И┤┤Д╬├Г └И┤▌Ф²╬Ф·°Ц─┌\n");
+                set("unit", "И║├");
                 set("value", 60);
                 set("food_remaining", 3);
                 set("food_supply", 30);

@@ -6,11 +6,11 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "��ͥ");
+        set("short", "西庭");
         set("long", @LONG
-������һ��ССͥԺ��Ժ���ﳣ����ɽ���ӽ��������ͥԺ���ܰ�
-ǽ�³��ŵ�С��ľ�ż��ð�����ǰ�ɫС��������ϸʯ�̾͵�С·��
-��ľ�Ժͳ��ݼ䴩����
+這裡是一個小小庭院，院子里常有嵩山弟子結伴往來。庭院四周矮
+牆下長着的小灌木里，偶爾冒出幾星白色小花。鵝卵細石鋪就的小路在
+灌木叢和長草間穿過。
 LONG );
         set("outdoors", "songshan");
         set("exits", ([
@@ -26,5 +26,5 @@ LONG );
         set("coor/y", 900);
         set("coor/z", 90);
         setup();
-        create_door("south" , "ľ��", "north" , DOOR_CLOSED);
+        create_door("south" , "木門", "north" , DOOR_CLOSED);
 }

@@ -5,11 +5,11 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "ʮ������");
+        set("short", "十里游廊");
         set("long", @LONG
-ʮ�����ȴ�����ϪԴϿ���С����ȷ����������ɫ����������ʯ��
-��������ʯ��ᾣ����·ת��ɽ��ˮ�أ�ǧ�����֣������������ľɭ
-�������ٲ��ơ�
+十里游廊穿行於溪源峽谷中。游廊風光漪麗，景色秀美。兩岸石壁
+對立，怪石嶙峋；峰迴路轉，山曲水迂；千屏萬嶂，綿延起伏；樹木森
+郁，古藤纏繞。
 LONG );
         set("exits", ([
                 "southeast" : __DIR__"beimenling",

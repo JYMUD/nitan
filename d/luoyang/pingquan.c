@@ -5,11 +5,11 @@ inherit  ROOM;
 
 void  create  ()
 {
-        set("short",  "ƽȪ����");
+        set("short",  "平泉朝游");
         set("long",  @LONG
-������������ʮ��������ߵ�ɽ���£��и������ʹ塣����ɽ��
-��������ľ��ӳ��ȪˮԴ�ڣ���Ϫ�ӻأ�����������ʱ�������ԣ��
-��������ƽȪ���Ρ���������˾�֮һ��
+在洛陽城南三十里，龍門西邊的山腳下，有個梁家屯村。這裡山巒
+環抱，林木掩映，泉水源口，清溪縈迴，這就是唐武帝時宰相李德裕的
+別墅。“平泉朝游”是洛陽大八景之一。
 LONG);
         set("exits",  ([  /*  sizeof()  ==  2  */
                 "east" :  __DIR__"guandaos4",

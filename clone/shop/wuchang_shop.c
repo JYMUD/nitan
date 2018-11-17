@@ -5,7 +5,7 @@ inherit SHOP;
 
 void create()
 {
-        set("short", "���²�");
+        set("short", "悅新昌");
         set("no_fight", 1);
         set("no_beg", 1);
         set("owner", "VOID_SHOP");
@@ -26,14 +26,14 @@ void init()
 {
         if (query("shop_type") == 0)
                 set("long", @LONG
-���²������ڳ������ϣ���һ��װ�����µĵ��̡�����¥����һ
-����ҵ���Ҳ�����⡣����������ȴ����һ��������Ѻܾ�û����
-�����ˡ�
+悅新昌是落於長江邊上，是一間裝潢雅緻的店鋪。江城樓宇別具一
+格，這家店鋪也不例外。不過貨柜上卻空無一物，看樣子已很久沒人來
+打理了。
 LONG);
         else
                 set("long", @LONG
-���²������ڳ������ϣ���һ��װ�����µĵ��̡�����¥����һ
-����ҵ���Ҳ�����⡣��ʱ���û����æ��æ�£��к��ſ��ˡ�
+悅新昌坐落於長江邊上，是一間裝潢雅緻的店鋪。江城樓宇別具一
+格，這家店鋪也不例外。此時店堂夥計正忙上忙下，招呼着客人。
 LONG);
         return;
 }

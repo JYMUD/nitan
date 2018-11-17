@@ -3,15 +3,15 @@
 
 void create()
 {
-        set_name(HIY "Ñ×»Æ¡¤Õ½Éñ" NOR, ({"yanhuang zhanshen", "yanhuang", "zhanshen" }));
+        set_name(HIY "ç‚é»ƒãƒ»æˆ°ç¥" NOR, ({"yanhuang zhanshen", "yanhuang", "zhanshen" }));
         set_weight(900);
         if (clonep())
                 set_default_object(__FILE__);
         else {
-                set("long", HIY "Ñ×»Æ¡¤Õ½ÉñÄËÑ×»ÆÖ®ÉñÆ·£¬ÓµÓĞ×ÅÎŞÇîµÄÁ¦Á¿¡£\n" NOR);
-                set("unit", "¿é");
+                set("long", HIY "ç‚é»ƒãƒ»æˆ°ç¥ä¹ƒç‚é»ƒä¹‹ç¥å“ï¼Œæ“æœ‰ç€ç„¡çª®çš„åŠ›é‡ã€‚\n" NOR);
+                set("unit", "å¡Š");
                 set("value", 5000);
-                set("enchase/name", "Ñ×»Æ¡¤Õ½Éñ");
+                set("enchase/name", "ç‚é»ƒãƒ»æˆ°ç¥");
                 set("enchase/point", 160);
                 set("enchase/type", "all");
                 set("enchase/cur_firm", 90);

@@ -1,4 +1,4 @@
-//xiaozhu.c                ËÄ´¨ÌÆÃÅ¡ªÁ«ÅºĞ¡Öş
+//xiaozhu.c                å››å·å”é–€â€•è“®è—•å°ç¯‰
 
 #include <ansi.h>
 #include <room.h>
@@ -6,14 +6,14 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "Á«ÅºĞ¡Öş");
+        set("short", "è“®è—•å°ç¯‰");
         set("long",
-"ÕâÀïÊÇ¾àÊñÖĞÌÆÃÅ²»Ô¶µÄÁ«ÅºĞ¡Öş¡£Á«ÅºĞ¡ÖşÊÇ¶°¹ÅÓñÉ«µÄ½¨Öş¿´À´\n"
-"ÑÅÖÂ¼òÆÓ£¬µ«ÓĞ¶àÉÙ½­ºş¸ßÊÖÎªÁËÔ½´ËÒ»²½£¬¶¼Ê¬ºá±éµØ²»¿ÉµÃÄØ£¡Ò»ÉÈ\n"
-"ºñÖØµÄ´óÃÅ(door)½ô½ôµÄ±Õ×Å¡£\n"
+"é€™è£¡æ˜¯è·èœ€ä¸­å”é–€ä¸é çš„è“®è—•å°ç¯‰ã€‚è“®è—•å°ç¯‰æ˜¯æ£Ÿå¤ç‰è‰²çš„å»ºç¯‰çœ‹ä¾†\n"
+"é›…ç·»ç°¡æ¨¸ï¼Œä½†æœ‰å¤šå°‘æ±Ÿæ¹–é«˜æ‰‹ç‚ºäº†è¶Šæ­¤ä¸€æ­¥ï¼Œéƒ½å±æ©«éåœ°ä¸å¯å¾—å‘¢ï¼ä¸€æ‰‡\n"
+"åšé‡çš„å¤§é–€(door)ç·Šç·Šçš„é–‰ç€ã€‚\n"
 );
         set("item_desc", ([
-                "door" : "ÕâÊÇÒ»ÉÈ¼«ÆäºñÖØµÄ´óÃÅ£¬Á½¸ö×ÏÍ­ÃÅ»·±ã×ãÓĞÍë¿Ú´óĞ¡¡£\n"NOR,
+                "door" : "é€™æ˜¯ä¸€æ‰‡æ¥µå…¶åšé‡çš„å¤§é–€ï¼Œå…©å€‹ç´«éŠ…é–€ç’°ä¾¿è¶³æœ‰ç¢—å£å¤§å°ã€‚\n"NOR,
         ]));
         set("area", "tangmen");
         setup();
@@ -32,7 +32,7 @@ int do_open(string arg)
 
         if ( arg && arg=="door" )
         {
-                message_vision(HIC "$NË«ÊÖÓÃÁ¦ÏëÍÆ¿ª´óÃÅ£¬µ«´óÃÅÏÔÈ»´ÓÀïÃæËø×¡ÁË¡£\n" NOR, ob);
+                message_vision(HIC "$Né›™æ‰‹ç”¨åŠ›æƒ³æ¨é–‹å¤§é–€ï¼Œä½†å¤§é–€é¡¯ç„¶å¾è£¡é¢é–ä½äº†ã€‚\n" NOR, ob);
                 return 1;
         }
 }
@@ -44,15 +44,15 @@ int do_knock(string arg)
         ob = this_player();
 
         if ( query("exits/enter") )
-                return notify_fail("ÃÅÒÑ¾­ÊÇ¿ª×ÅµÄÁË¡£\n");
+                return notify_fail("é–€å·²ç¶“æ˜¯é–‹ç€çš„äº†ã€‚\n");
 
         if ( !( room = find_object(__DIR__"shuige1")) )
                 room = load_object(__DIR__"shuige1");
 
         if ( arg && arg=="door" && objectp(room) )
         {
-//                message_vision(HIC "$NÉìÊÖĞ¡ĞÄÒíÒíµÄ¿Û¶¯ÃÅ»·¡£\nºöÌıÒ»ÈËâõÉùâõÆøµÄµÀ£º¡°ºÎ±ØÎªÄÑÄØ£¿ÓĞµ¨¾Í½øĞ¡ÖşÀïÀ´°É£¬ÎÒÕı¹§ºò¹âÁÙÁ¨£¡¡£\n´óÃÅÇÄÎŞÉùÏ¢µÄ´ò¿ªÁË¡£\n" NOR, ob);
-                message_vision(HIC "$NÓÃÁ¦¿Û¶¯ÃÅ»·£¬´óÃÅÇÄÎŞÉùÏ¢µÄ´ò¿ªÁË¡£\n" NOR, ob);
+//                message_vision(HIC "$Nä¼¸æ‰‹å°å¿ƒç¿¼ç¿¼çš„æ‰£å‹•é–€ç’°ã€‚\nå¿½è½ä¸€äººæ€©è²æ€©æ°£çš„é“ï¼šâ€œä½•å¿…ç‚ºé›£å‘¢ï¼Ÿæœ‰è†½å°±é€²å°ç¯‰é‡Œä¾†å§ï¼Œæˆ‘æ­£æ­å€™å…‰è‡¨å“©ï¼ã€‚\nå¤§é–€æ‚„ç„¡è²æ¯çš„æ‰“é–‹äº†ã€‚\n" NOR, ob);
+                message_vision(HIC "$Nç”¨åŠ›æ‰£å‹•é–€ç’°ï¼Œå¤§é–€æ‚„ç„¡è²æ¯çš„æ‰“é–‹äº†ã€‚\n" NOR, ob);
                 set("exits/enter", __DIR__"shuige1");
                 set("exits/out", __DIR__"xiaozhu", room);
                 remove_call_out("close");
@@ -72,7 +72,7 @@ void close()
                 room = load_object(__DIR__"shuige1");
 
         if( this_object() == environment(this_player()) || room == environment(this_player()))
-                message("vision",HIR"´óÃÅÇÄÎŞÉùÏ¢µÄ¹ØÁËÆğÀ´¡£\n"NOR, this_player());
+                message("vision",HIR"å¤§é–€æ‚„ç„¡è²æ¯çš„é—œäº†èµ·ä¾†ã€‚\n"NOR, this_player());
         
         delete("exits/enter");
         if ( objectp(room) )

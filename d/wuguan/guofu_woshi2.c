@@ -2,11 +2,11 @@ inherit ROOM;
 
 void create()
 {
-    	set("short","��Ϣ��");
+    	set("short","休息室");
         set("long", @LONG
-�����ǹ����ڵ���Ϣ�ң������е��ɣ����Ǵ�ɨ�ķǳ�
-�ɾ���һ�Ŵ��̿�ǽ���ţ������ȥҲ��һ����Ϣ�ң����ϵ�
-���˽�����Ϣ���Ѻ���ȥ�������ĵ��Ҹ�����˯��������
+這裡是郭府內的休息室，屋子有點點舊，但是打掃的非常
+乾淨，一排床鋪靠牆擺着，東面過去也是一間休息室，不斷的
+有人進來休息或醒後離去，你悄悄的找個空鋪睡了下來。
 LONG);
         set("exits", ([
             "west" : __DIR__"guofu_woshi1",

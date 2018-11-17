@@ -7,10 +7,10 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "�ຮ¥");
+        set("short", "苦寒樓");
         set("long",@long
-�����������ɵĿຮ¥��ȡ���ԡ�÷�����Կຮ����֮�⣬������
-����ǰ��Ϊ�˼�����������ɵ��Ӷ����ģ������ص��Ӿ���֮����
+這裡是崑崙派的苦寒樓，取名自“梅花香自苦寒來”之意，乃是昆
+侖派前輩為了激勵後進崑崙派弟子而建的，是崑崙弟子靜修之所。
 long);
         set("exits",([
                 "west" : __DIR__"shanlin"+(random(5)+1),

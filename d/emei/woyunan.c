@@ -2,10 +2,10 @@ inherit ROOM;
 
 void create()
 {
-      set("short", "������");
+      set("short", "卧雲庵");
         set("long", @LONG
-�������Ա��и�����Ȫ����˵��ǰ������ˮ�˶��˶��ɺԣ�����
-Ϊ֮�о�������Ȫˮ���������������ֱ��Ƕù�̨���Ա߱��ǻ����֡�
+卧雲庵旁邊有個井絡泉，據說以前曾因飲水人多了而乾涸，眾尼
+為之誦經，於是泉水復出。出了卧雲庵便是睹光台，旁邊便是華藏庵。
 LONG );
         set("objects", ([
                 CLASS_D("emei") + "/xuan" : 1,

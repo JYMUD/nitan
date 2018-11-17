@@ -1,4 +1,4 @@
-// feng.c ·ëÀÏ°å
+// feng.c é¦®è€é—†
 
 #include <ansi.h>
 
@@ -7,16 +7,16 @@ inherit F_DEALER;
 
 void create()
 {
-        set_name("·ë»¢", ({ "feng hu", "feng" }));
-        set("title", "µ±ÆÌÀÏ°å");
+        set_name("é¦®è™", ({ "feng hu", "feng" }));
+        set("title", "ç•¶é‹ªè€é—†");
         set("shen_type", 0);
 
-        set("gender", "ÄĞĞÔ");
+        set("gender", "ç”·æ€§");
         set_max_encumbrance(100000000);
         set("age", 35);
         set("str", 100);
         set("no_get_from", 1);
-//ÒÔÏÂÎª·ÀÖ¹Íæ¼ÒÔËÓÃÌØÊâ·½·¨½«µ±ÆÌÀÏ°å°á×ß¡£
+//ä»¥ä¸‹ç‚ºé˜²æ­¢ç©å®¶é‹ç”¨ç‰¹æ®Šæ–¹æ³•å°‡ç•¶é‹ªè€é—†æ¬èµ°ã€‚
         set("no_get", "1");
 
         set_skill("unarmed", 60);
@@ -42,6 +42,6 @@ void init()
 
 void die()
 {
-        message_vision("\n$NËÀÁË¡£\n", this_object());
+        message_vision("\n$Næ­»äº†ã€‚\n", this_object());
         destruct(this_object());
 }

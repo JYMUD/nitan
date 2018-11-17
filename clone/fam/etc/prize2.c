@@ -3,13 +3,13 @@ inherit ITEM;
 
 void create()
 {
-        set_name(HIW "Â}òTÊ¿„ìÕÂ" NOR, ({ "chivalry medal", "chivalry", "medal" }));
+        set_name(HIW "å£«ç« " NOR, ({ "chivalry medal", "chivalry", "medal" }));
         set_weight(1000);
         if (clonep())
                 set_default_object(__FILE__);
         else {
-                set("long", HIW "Ó¢‡øÅ®ÍõîC°lµÄª„ÕÂ£¬ËÆºõ¿ÉÒÔÙu‚€ºÃƒråX¡£\n" NOR);
-                set("unit", "Ã¶");
+                set("long", HIW "è‹±å¥³ç‹çš„ç« ï¼Œä¼¼ä¹å¯ä»¥å¥½ã€‚\n" NOR);
+                set("unit", "æš");
                 set("value", 500000);
         }
         setup();

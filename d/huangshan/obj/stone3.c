@@ -3,7 +3,7 @@
 inherit ITEM;
 void create()
 {
-        set_name("ÑÒÊ¯", ({ "yan shi", "rock", "yanshi" }) );
+        set_name("å²©çŸ³", ({ "yan shi", "rock", "yanshi" }) );
         set_weight(500);
         set_max_encumbrance(80000);
         set("no_get", 1);
@@ -11,9 +11,9 @@ void create()
         if( clonep() )
                 set_default_object(__FILE__);
         else {
-                set("unit", "¿é");
-                set("long", "Ò»¿éºáÎÔÉ½Â´£¬×óºñÓÒ±¡ÖĞ¿Õ£¬
-×´Èç¹ÅÇÙµÄÑÒÊ¯¡£ÈªË®³å»÷ÔÚÑÒÊ¯ÉÏ£¬·¢³öÔÃ¶ú¶øÓĞ½Ú×àµÄÒôÏì¡£\n");
+                set("unit", "å¡Š");
+                set("long", "ä¸€å¡Šæ©«å§å±±éº“ï¼Œå·¦åšå³è–„ä¸­ç©ºï¼Œ
+ç‹€å¦‚å¤ç´çš„å²©çŸ³ã€‚æ³‰æ°´è¡æ“Šåœ¨å²©çŸ³ä¸Šï¼Œç™¼å‡ºæ‚…è€³è€Œæœ‰ç¯€å¥çš„éŸ³éŸ¿ã€‚\n");
                 set("value", 1);
         }
 }

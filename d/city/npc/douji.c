@@ -10,11 +10,11 @@ int  random2  (int  i)
 
 void  create()
 {
-        set_name("¶·¼¦",  ({  "dou  ji",  "ji"  })  );
-        set("race", "·ÉÇÝ");
-        set("gender",  "ÐÛÐÔ");
+        set_name("é¬¥é›ž",  ({  "dou  ji",  "ji"  })  );
+        set("race", "é£›ç¦½");
+        set("gender",  "é›„æ€§");
         set("age",  2);
-        set("long",  "Ò»Ö»ÐÛôñôñµÄ¶·¼¦¡£\n");
+        set("long",  "ä¸€éš»é›„èµ³èµ³çš„é¬¥é›žã€‚\n");
         set("attitude",  "friendly");
         set("max_qi",200+random2(2));
         set("max_jing",200+random2(2));

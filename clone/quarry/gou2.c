@@ -3,8 +3,8 @@ inherit QUARRY;
 
 void create()
 {
-        set_name("´óÀÇ¹·", ({ "wolf dog", "dog" }) );
-        set("long", NOR + WHT "ÕâÊÇÒ»Ö»°ºÊ×Í¦ĞØ£¬ÍÂ×Å³¤ÉàÍ·µÄÀÇ¹·¡£\n" NOR);
+        set_name("å¤§ç‹¼ç‹—", ({ "wolf dog", "dog" }) );
+        set("long", NOR + WHT "é€™æ˜¯ä¸€éš»æ˜‚é¦–æŒºèƒ¸ï¼Œåç€é•·èˆŒé ­çš„ç‹¼ç‹—ã€‚\n" NOR);
 
         set("age", 1);
         set("str", 18);

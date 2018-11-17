@@ -4,11 +4,11 @@
 inherit ROOM;
 void create()
 {
-        set("short","��С֥�ƶ�");
+        set("short","大，小芝雲洞");
         set("long", @LONG
-���Ż��۽��붴�ڣ��ػ����У����ã�����һ����Ȼ���ʣ�ʯ��
-�飬ʯ��ʯ����������͸��������ʤ�����ձ�Ӱ�����´����ң�Ϫ
-�ƽ�ˮ�������ֺ���ʯ��δ䣬���Ŀɰ���
+帶着火折進入洞內，迂迴蛇行，不久，即見一廳豁然開朗，石鍾
+乳，石筍，石柱，玲瓏剔透，斗奇爭勝。光照壁影，如月穿曉岩，溪
+雲接水，壁氣侵寒，石光滴翠，清幽可愛。
 LONG );
         set("outdoors", "dalin");
         set("exits",([ /* sizeof() == 1 */

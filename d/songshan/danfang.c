@@ -5,11 +5,11 @@
 inherit ROOM;
 void create()
 {
-        set("short", "����");
+        set("short", "丹房");
         set("long", @LONG
-����������һ����ѧ��ʦ������֮���������˵á����ڶ�ҩ��Ҳʮ
-�־�ͨ�������ڷ���������ֻ�״�ƿ��װ�ţ����ϱ�ǩ�����ű���ط�
-�����ܵ�ҩ���ϡ�
+左冷禪既是一代武學宗師，刀圭之術亦甚是了得。他在對藥理也十
+分精通。丹房內放置着數百隻白瓷瓶子裝着，貼上標籤，分門別類地放
+在四周的葯架上。
 LONG);
         set("exits", ([
                 "east" : __DIR__"houting",

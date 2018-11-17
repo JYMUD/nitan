@@ -2,10 +2,10 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "���");
+        set("short", "麵館");
         set("long", @LONG
-�����ǻ���·��ͷ��һ��С��ݣ������ʹ����ˤ����ӵ�����档
-��ݵ��ƹ�ͻ���������ǵ���ͷ��������Ҳ���ҳ�һ����
+這裡是虎坊路盡頭的一家小麵館，幾個皇宮裡的摔跤手擁在裡面。
+麵館的掌柜和夥計威於他們的勢頭，連大氣也不敢出一聲。
 LONG );
         set("exits", ([
                 "north" : "/d/beijing/fu_1",

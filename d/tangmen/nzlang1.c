@@ -1,4 +1,4 @@
-//nzlang1.c                ËÄ´¨ÌÆÃÅ¡ª×ßÀÈ
+//nzlang1.c                å››å·å”é–€â€•èµ°å»Š
 
 #include <ansi.h>
 #include <room.h>
@@ -6,10 +6,10 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "×ßÀÈ");
+        set("short", "èµ°å»Š");
         set("long",
-"ÕâÀïÊÇÁ«ÔÆ¸ó±±²àµÄ×ßÀÈ¡£Á½ÅÔÊÇ±ÌÂÌµÄºþË®£¬ÎÞÊýºÉ»¨º¬°úÓû·Å£¬\n"
-"ÕâÃÀ¾°ÈÃÈËÁôÁ¬Íü·µ£¬Ö¹²½²»Ç°¡£ÕâÀïÍ¨ÏòÁ«ÔÆ¸óºóÕ¬¡£\n"
+"é€™è£¡æ˜¯è“®é›²é–£åŒ—å´çš„èµ°å»Šã€‚å…©æ—æ˜¯ç¢§ç¶ çš„æ¹–æ°´ï¼Œç„¡æ•¸è·èŠ±å«è‹žæ¬²æ”¾ï¼Œ\n"
+"é€™ç¾Žæ™¯è®“äººç•™é€£å¿˜è¿”ï¼Œæ­¢æ­¥ä¸å‰ã€‚é€™è£¡é€šå‘è“®é›²é–£å¾Œå®…ã€‚\n"
 );
         set("exits", ([
                         "south" : __DIR__"lianyunge",

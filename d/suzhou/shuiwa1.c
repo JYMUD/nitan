@@ -4,10 +4,10 @@ inherit ROOM;
 
 void create()
 {
-        set("short", "������");
+        set("short", "划船塢");
         set("long",@long
-������Ϊ������¥�����׳ơ������롱���ഫ��ʩ�ڴ������ۡ���
-����һ��ֱ̫ͨ�����˹������СϪ��
+這裡名為“畫船樓”，俗稱“划船塢”，相傳西施在此玩龍舟。向
+南有一條直通太湖的人工開鑿的小溪。
 long);
         set("outdoors", "suzhou");
         set("exits",([

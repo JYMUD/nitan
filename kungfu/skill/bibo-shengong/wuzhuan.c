@@ -1,5 +1,5 @@
 // Code of JHSH
-// wuzhuan.c ÆæÃÅÎå×ª
+// wuzhuan.c å¥‡é–€äº”è½‰
 
 #include <ansi.h>
 
@@ -13,22 +13,22 @@ int exert(object me, object target)
         int i, extra;
 
         if( query_temp("wuzhuan", me) )
-                return notify_fail("ÄãÕýÔÚÔËÓÃ¡¸ÆæÃÅÎå×ª¡¹ÐÄ·¨£¡\n");
+                return notify_fail("ä½ æ­£åœ¨é‹ç”¨ã€Œå¥‡é–€äº”è½‰ã€å¿ƒæ³•ï¼\n");
 
         if( me->query_skill_mapped("force") != "bibo-shengong")
-                return notify_fail("ÄãËùÓÃµÄÄÚ¹¦Óë¡¸ÆæÃÅÎå×ª¡¹ÐÄ·¨Ïàã££¡\n");
+                return notify_fail("ä½ æ‰€ç”¨çš„å…§åŠŸèˆ‡ã€Œå¥‡é–€äº”è½‰ã€å¿ƒæ³•ç›¸æ‚–ï¼\n");
 
         if( me->query_skill("bibo-shengong", 1) < 100 )
-                return notify_fail("ÄãµÄÄÚ¹¦ÐÞÎª»ðºòÎ´µ½£¬»¹Î´ÁìÎò¡¸ÆæÃÅÎå×ª¡¹£¡\n");
+                return notify_fail("ä½ çš„å…§åŠŸä¿®ç‚ºç«å€™æœªåˆ°ï¼Œé‚„æœªé ˜æ‚Ÿã€Œå¥‡é–€äº”è½‰ã€ï¼\n");
 
         if( query("neili", me)<500 )
-                return notify_fail("ÄãµÄÄÚÁ¦²»¹»£¬¾¢Á¦²»×ãÒÔÊ©Õ¹¡¸ÆæÃÅÎå×ª¡¹£¡\n");
+                return notify_fail("ä½ çš„å…§åŠ›ä¸å¤ ï¼Œå‹åŠ›ä¸è¶³ä»¥æ–½å±•ã€Œå¥‡é–€äº”è½‰ã€ï¼\n");
         
         if( me->query_skill("qimen-wuxing", 1) < 120 )
-                return notify_fail("ÄãµÄÆæÃÅÎåÐÐÐÞÎª²»¹»£¬»¹Î´ÁìÎò¡¸ÆæÃÅÎå×ª¡¹£¡\n");
+                return notify_fail("ä½ çš„å¥‡é–€äº”è¡Œä¿®ç‚ºä¸å¤ ï¼Œé‚„æœªé ˜æ‚Ÿã€Œå¥‡é–€äº”è½‰ã€ï¼\n");
 
-        msg = HIG "$NÁ³ÉÏÇàÆø´óÊ¢£¬½ÅÏÂ»º»º²È×Å¾Å¹¬°ËØÔ·½Î»£¬Í·¶¥Ã°³öÌÚÌÚ°×Æø£¬";
-        msg += "ËÄÃæÒþÒþ´«À´³±Ó¿Ö®Éù£¬±Ì²¨Éñ¹¦ÒÑ·¢»Óµ½¼«ÖÂ£¡\n"NOR;
+        msg = HIG "$Nè‡‰ä¸Šé’æ°£å¤§ç››ï¼Œè…³ä¸‹ç·©ç·©è¸©ç€ä¹å®®å…«å¦æ–¹ä½ï¼Œé ­é ‚å†’å‡ºé¨°é¨°ç™½æ°£ï¼Œ";
+        msg += "å››é¢éš±éš±å‚³ä¾†æ½®æ¹§ä¹‹è²ï¼Œç¢§æ³¢ç¥žåŠŸå·²ç™¼æ®åˆ°æ¥µè‡´ï¼\n"NOR;
 
         addn("neili", -200, me);
         
@@ -58,5 +58,5 @@ void remove_effect(object me, int extra)
 
         delete_temp("wuzhuan_hit", me);
         delete_temp("wuzhuan", me);
-        message_vision(CYN"$NÖ»¾õÕæÆøÔË×ª²»³©£¬²»µÃ²»·ÅÂý²½·¨£¬µ÷Ï¢ÍÂÄÉ¡£\n"NOR,me);
+        message_vision(CYN"$Nåªè¦ºçœŸæ°£é‹è½‰ä¸æš¢ï¼Œä¸å¾—ä¸æ”¾æ…¢æ­¥æ³•ï¼Œèª¿æ¯åç´ã€‚\n"NOR,me);
 }
