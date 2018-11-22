@@ -111,19 +111,19 @@ public mixed teach_pfm(object who, object ob, mapping b)
                 // 如果要求為負神，則作出大於判斷
                 if( shen<0 && query("shen", who)>shen )
                         return "哼！像你這樣的心慈手軟之輩，又"
-                               "能幹成什麼大事？  （需要"+shen+"點邪氣）";
+                               "能幹成什麼大事？  （需要"+ to_string(shen) +"點邪氣）";
 
                 // 如果要求為正神，則作出小於判斷
                 if( shen>0 && query("shen", who)<shen )
                         return "你目前所做的俠義正事不夠，這招"
-                               "暫時還不能傳你。  （需要"+shen+"點正氣）";
+                               "暫時還不能傳你。  （需要"+ to_string(shen) +"點正氣）";
         }
 
         // 判斷門派貢獻的要求
         if (intp(gongxian = b["gongxian"])
             && query("family/gongji", who)<gongxian )
                 return "你為"+query("family/family_name", who)+
-                       "作出的貢獻不夠，這招暫時還不能傳你。  （需要"+gongxian+"點門派貢獻）";
+                       "作出的貢獻不夠，這招暫時還不能傳你。  （需要"+ to_string(gongxian) +"點門派貢獻）";
 
         // 判斷特定的進程記錄要求
         if( stringp(temp1=b["temp1"]) && !query(temp1, who) )
@@ -162,52 +162,52 @@ public mixed teach_pfm(object who, object ob, mapping b)
 
                 if (who->query_skill(sk1, 1) < lv1)
                         return "你對" + to_chinese(sk1) + "的"
-                               "了解還不夠，尚且無法領悟此招。  （需要"+to_chinese(sk1)+lv1"級）";
+                               "了解還不夠，尚且無法領悟此招。  （需要"+ to_chinese(sk1) + to_string(lv1) +"級）";
         }
 
         if (stringp(sk2 = b["sk2"]) && intp(lv2 = b["lv2"])
            && who->query_skill(sk2, 1) < lv2)
                 return "你對" + to_chinese(sk2) + "的了解還不"
-                       "夠，尚且無法領悟此招。  （需要"+to_chinese(sk2)+lv2"級）";
+                       "夠，尚且無法領悟此招。  （需要"+ to_chinese(sk2) + to_string(lv2) +"級）";
 
         if (stringp(sk3 = b["sk3"]) && intp(lv3 = b["lv3"])
            && who->query_skill(sk3, 1) < lv3)
                 return "你對" + to_chinese(sk3) + "的了解還不"
-                       "夠，尚且無法領悟此招。  （需要"+to_chinese(sk3)+lv3"級）";
+                       "夠，尚且無法領悟此招。  （需要"+ to_chinese(sk3) + to_string(lv3) +"級）";
 
         if (stringp(sk4 = b["sk4"]) && intp(lv4 = b["lv4"])
            && who->query_skill(sk4, 1) < lv4)
                 return "你對" + to_chinese(sk4) + "的了解還不"
-                       "夠，尚且無法領悟此招。  （需要"+to_chinese(sk4)+lv4"級）";
+                       "夠，尚且無法領悟此招。  （需要"+ to_chinese(sk4) + to_string(lv4) +"級）";
 
         if (stringp(sk5 = b["sk5"]) && intp(lv5 = b["lv5"])
            && who->query_skill(sk5, 1) < lv5)
                 return "你對" + to_chinese(sk5) + "的了解還不"
-                       "夠，尚且無法領悟此招。  （需要"+to_chinese(sk5)+lv5"級）";
+                       "夠，尚且無法領悟此招。  （需要"+ to_chinese(sk5) + to_string(lv5) +"級）";
 
         // 判斷絕招對內功的要求
         if (intp(force = b["force"])
            && force > 0
            && who->query_skill("force") < force)
-                return "你目前的內功火候不足，下去練練再來吧。  （需要內功有效等級"+force+"級）";
+                return "你目前的內功火候不足，下去練練再來吧。  （需要內功有效等級"+ to_string(force) +"級）";
 
         // 判斷絕招對輕功的要求
         if (intp(dodge = b["dodge"])
            && dodge > 0
            && who->query_skill("dodge") < dodge)
-                return "你目前的輕功火候不足，下去練練再來吧。  （需要輕功有效等級"+force+"級）";
+                return "你目前的輕功火候不足，下去練練再來吧。  （需要輕功有效等級"+ to_string(dodge) +"級）";
 
         // 判斷絕招對內力上限的要求
         if (intp(neili = b["neili"])
            && neili > 0
             && query("max_neili", who)<neili )
-                return "你現在的內力修為不足，修練高點再來吧。  （需要內力"+neili+"點）";
+                return "你現在的內力修為不足，修練高點再來吧。  （需要內力"+ to_string(neili) +"點）";
 
         // 判斷絕招對精力上限的要求
         if (intp(jingli = b["jingli"])
            && jingli > 0
             && query("max_jingli", who)<jingli )
-                return "你現在的精力修為不足，修練高點再來吧。  （需要精力"+jingli+"點）";
+                return "你現在的精力修為不足，修練高點再來吧。  （需要精力"+ to_string(jingli) +"點）";
 
         // 給予學習絕招的描述信息
         if (stringp(msg1 = b["msg1"]))

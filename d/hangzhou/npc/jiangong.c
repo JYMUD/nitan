@@ -36,7 +36,7 @@ void create()
 
         set("chat_chance", 1);
         set("chat_msg", ({
-                "監工喝道：快！快給我干！\n",
+                "監工喝道：快！快給我幹！\n",
                 "監工一揚鞭子，罵道：他奶奶的，你給我放老實點。\n",
                 "監工打量着四周，不知道在打什麼主意。 \n",
                 "監工狠狠的抽了一個人幾下，罵道：怎麼把礦石掉到地上了，你這笨蛋。\n",
@@ -57,7 +57,7 @@ mixed ask_mine()
 
         me = this_player();
         if( query_temp("job/mine", me) )
-                return "不是讓你去采么？你幹完了？少在我面前玩花樣！";
+                return "不是讓你去採麼？你幹完了？少在我面前玩花樣！";
 
         if( query("combat_exp", me)<80000 )
                 return "滾開，就你這點本事，下井被砸死都不知道。";
@@ -80,7 +80,7 @@ mixed ask_mine()
                 return "現在已經有" + obs[0]->name() + "幹活呢，你歇着吧。";
 
         set_temp("job/mine", 1, me);
-        return "好，你下井去采(mine)些礦石上來，放到那邊的車上，幹了活官府自然會給錢。";
+        return "好，你下井去採(mine)些礦石上來，放到那邊的車上，幹了活官府自然會給錢。";
 }
 
 int do_mine(string arg)
@@ -268,7 +268,7 @@ mixed ask_transit()
                 return "不行不行，你這人本事太差，路上別把貨都丟了！";
 
         if( objectp(query_temp("job/hz_cart", me)) )
-                return "上次讓你送的你完事了么？快去！少和我羅嗦！";
+                return "上次讓你送的你完事了麼？快去！少和我囉嗦！";
 
         if( (amount=query("job/hz_cuprum_ore", me))>0 )
         {
@@ -299,7 +299,7 @@ mixed ask_transit()
                                this_object(), me);
         if (c < 3000)
                 message_vision("$N看到$n，招呼道：“正好，正"
-                               "打算髮車呢，就你來吧！”\n",
+                               "打算發車呢，就你來吧！”\n",
                                this_object(), me);
         else
         if (c < 8000)

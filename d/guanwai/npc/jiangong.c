@@ -37,7 +37,7 @@ void create()
 
         set("chat_chance", 1);
         set("chat_msg", ({
-                "監工喝道：快！快給我干！\n",
+                "監工喝道：快！快給我幹！\n",
                 "監工一揚鞭子，罵道：他奶奶的，你給我放老實點。\n",
                 "監工打量着四周，不知道在打什麼主意。 \n",
                 "監工狠狠的抽了一個人幾下，罵道：怎麼把石頭掉到地上了，你這笨蛋。\n",
@@ -60,7 +60,7 @@ mixed ask_mine()
                 return "讓你搬的石料你搬了沒有？再胡鬧我抽死你！";
 
         if( query("combat_exp", me)<50000 )
-                return "你這點經驗也來採石場混？隨便一大哥看你不順眼就把你放到了。";
+                return "你這點經驗也來採石場混？隨便一大哥看你不順眼就把你放倒了。";
 
         if( query("combat_exp", me)>300000 )
                 return "大俠你也來搬石頭？免了免了，我還是另找人吧！";
@@ -203,7 +203,7 @@ int halt_working(object me)
         if( query_temp("job/step", me) >= 4 )
         {
                 message_vision("$N把肩頭的石料一仍，罵罵咧咧道："
-                               "累死我了，真不是人乾的活！\n", me);
+                               "累死我了，真不是人幹的活！\n", me);
         } else
         {
                 message_vision("$N嘆了口氣，道：今天不幹了！\n", me);
@@ -230,13 +230,13 @@ mixed ask_transit()
         me = this_player();
 
         if( query("score", me)<1000 )
-                return "你這人閱歷這些淺，也敢接這差使？";
+                return "你這人閱歷這麼淺，也敢接這差使？";
 
         if( query("combat_exp", me)<30000 )
                 return "一邊兒去！你這人本事太差，我可不放心讓你押貨！";
 
         if( objectp(query_temp("job/gw_cart", me)) )
-                return "上次讓你送的你完事了么？快去！別羅嗦！";
+                return "上次讓你送的你完事了麼？快去！別囉嗦！";
 
         if( (amount=query("job/gw_stone", me))>0 )
         {
@@ -267,7 +267,7 @@ mixed ask_transit()
                                this_object(), me);
         if (c < 10000)
                 message_vision("$N看到$n，招呼道：“正好，正"
-                               "打算髮車呢，就你來吧！”\n",
+                               "打算發車呢，就你來吧！”\n",
                                this_object(), me);
         else
         if (c < 30000)
