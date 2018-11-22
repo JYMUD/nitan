@@ -73,7 +73,7 @@ void create()
         create_family("武當派", 2, "弟子");
 
         set("inquiry", ([
-                "亂環決": (: ask_me :),
+                "亂環訣": (: ask_me :),
                 "絕招"  : (: ask_me :),
         ]));
 
@@ -105,14 +105,14 @@ void attempt_apprentice(object ob)
         {
                 command("say 我武當乃是堂堂名門正派，對弟子要求極嚴。");
                 command("say 在德行方面，" + RANK_D->query_respect(ob) +
-                        "是否還做得不夠？");
+                        "是否還做得不夠？  （需要6000點正氣）");
                 return;
         }
 
         if ((int)ob->query_skill("yinyun-ziqi",1) < 60)
         {
                 command("say 我武當派最注重內功心法" + RANK_D->query_respect(ob)+
-                        "是否應該在武當心法上多下點功夫啊?");
+                        "是否應該在氤氳紫氣上多下點功夫啊?  （需要氤氳紫氣60級）");
                 return;
         }
 
@@ -120,7 +120,7 @@ void attempt_apprentice(object ob)
         {
                 command("say 習武是為了強身健體，一味的練武是不可取的。");
                 command("say 我看你還需要在修身養性方面多鍛煉鍛煉，以提"
-                        "高你的道德心法。");
+                        "高你的道德心法。  （需要道學心法60級）");
                 return;
         }
 
@@ -146,13 +146,13 @@ mixed ask_me()
                 return "你連玄虛刀法都沒學，還談什麼絕招可言？";
 
         if( query("family/gongji", me)<150 )
-                return "你為我武當派效力還不夠，這招我先不忙傳你。";
+                return "你為我武當派效力還不夠，這招我先不忙傳你。  （需要150點門派貢獻）";
 
         if( query("shen", me)<10000 )
-                return "你行俠仗義的事情做的還很不夠，我不能傳你絕招！";
+                return "你行俠仗義的事情做的還很不夠，我不能傳你絕招！  （需要10000點正氣）";
 
         if (me->query_skill("xuanxu-dao", 1) < 100)
-                return "你的玄虛刀法還不到家，要多練練！";
+                return "你的玄虛刀法還不到家，要多練練！  （需要氤氳紫氣100級）";
 
         message_vision(HIY "$n" HIY "點了點頭，隨手揮舞手中鋼刀，畫出一"
                        "個個圓\n圈，每招均是以弧形刺出，弧形收回。刀出成"
@@ -160,7 +160,7 @@ mixed ask_me()
                        me, this_object());
         command("smile");
         command("say 你可明白了玄虛刀法的要詣？");
-        tell_object(me, HIC "你學會了「亂環決」。\n" NOR);
+        tell_object(me, HIC "你學會了「亂環訣」。\n" NOR);
         if (me->can_improve_skill("blade"))
                 me->improve_skill("blade", 1500000);
         if (me->can_improve_skill("xuanxu-dao"))

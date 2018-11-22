@@ -109,14 +109,14 @@ void attempt_apprentice(object ob)
         {
                 command("say 我武當乃是堂堂名門正派，對弟子要求極嚴。");
                 command("say 在德行方面，" + RANK_D->query_respect(ob) +
-                        "是否還做得不夠？");
+                        "是否還做得不夠？ （需要2000點正氣）");
                 return;
         }
 
         if ((int)ob->query_skill("yinyun-ziqi", 1) < 50)
         {
                 command("say 我武當派最注重內功心法" + RANK_D->query_respect(ob)+
-                        "是否應該在武當心法上多下點功夫啊?");
+                        "是否應該在氤氳紫氣上多下點功夫啊? （需要氤氳紫氣50級）");
                 return;
         }
 
@@ -124,7 +124,7 @@ void attempt_apprentice(object ob)
         {
                 command("say 習武是為了強身健體，一味的練武是不可取的做！");
                 command("say 我看你還需要在修身養性方面多鍛煉鍛煉，以提高你"
-                        "的道德心法。");
+                        "的道德心法。  （需要道學心法50級）");
                 return;
         }
 
@@ -150,16 +150,16 @@ mixed ask_skill1()
                 return "你連震山掌都沒學，還談什麼絕招可言？";
 
         if( query("family/gongji", me)<50 )
-                return "你為我武當派效力還不夠，這招我先不忙傳你。";
+                return "你為我武當派效力還不夠，這招我先不忙傳你。  （需要50點門派貢獻）";
 
         if( query("shen", me)<6000 )
-                return "你行俠仗義的事情做的還很不夠，我不能傳你絕招！";
+                return "你行俠仗義的事情做的還很不夠，我不能傳你絕招！  （需要6000點正氣）";
 
         if (me->query_skill("zhenshan-zhang", 1) < 40)
-                return "你的震山掌修為太淺，修鍊好了再來吧。";
+                return "你的震山掌修為太淺，修鍊好了再來吧。  （需要震山掌40級）";
 
         if( query("max_neili", me)<200 )
-                return "你的內力修為太淺，修鍊高了再來吧。";
+                return "你的內力修為太淺，修鍊高了再來吧。  （需要200點內力）";
 
         message_vision(HIY "$n" HIY "點了點頭，將$N" HIY "招至"
                        "身邊，在耳旁低聲細說良久，$N" HIY "聽"
@@ -193,19 +193,19 @@ mixed ask_skill2()
                 return "你連武當劍法都沒學，還談什麼絕招可言？";
 
         if( query("family/gongji", me)<80 )
-                return "你為我武當派效力還不夠，這招我先不忙傳你。";
+                return "你為我武當派效力還不夠，這招我先不忙傳你。  （需要80點門派貢獻）";
 
         if( query("shen", me)<8000 )
-                return "你行俠仗義的事情做的還很不夠，我不能傳你絕招！";
+                return "你行俠仗義的事情做的還很不夠，我不能傳你絕招！  （需要8000點正氣）";
 
         if (me->query_skill("force") < 80)
-                return "你的內功的修為不夠，練高了再來吧。";
+                return "你的內功的修為不夠，練高了再來吧。  （需要內功有效等級80級）";
 
         if (me->query_skill("wudang-jian", 1) < 60)
-                return "你的武當劍法修為太淺，修鍊好了再來吧。";
+                return "你的武當劍法修為太淺，修鍊好了再來吧。  （需要武當劍法60級）";
 
         if( query("max_neili", me)<300 )
-                return "你的內力修為太淺，修鍊高了再來吧。";
+                return "你的內力修為太淺，修鍊高了再來吧。  （需要內力300點）";
 
         message_vision(HIY "$n" HIY "微微一笑，從懷中輕輕取出了一本"
                        "劍譜，指着其中一段對$N" HIY "細\n說良久，$N"

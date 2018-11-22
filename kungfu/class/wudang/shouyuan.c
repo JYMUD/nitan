@@ -8,7 +8,7 @@ void create()
 {
         set_name("成高道長", ({ "chenggao daozhang", "chenggao", "daozhang", "shouyuan" }));
         set("nickname", "守園道長");
-        set("long","他是凌虛的師侄，劍術算不得很精，但年輕之時，曾在西域住過十幾年，\n懂得善制炸藥，現今是看守榔梅園的道長。\n");
+        set("long","他是凌虛的師侄，劍術算不得很精，但年輕之時，曾在西域住過十幾年，\n懂得善製炸藥，現今是看守榔梅園的道長。\n");
         set("gender", "男性");
         set("age", 40);
         set("attitude", "peaceful");

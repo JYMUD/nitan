@@ -114,24 +114,24 @@ void attempt_apprentice(object ob)
         {
                 command("say 我武當乃是堂堂名門正派，對弟子要求極嚴。");
                 command("say 在德行方面，" + RANK_D->query_respect(ob) +
-                        "是否還做得不夠？");
+                        "是否還做得不夠？  （需要25000點正氣）");
                 return;
         }
         if ((int)ob->query_skill("yinyun-ziqi", 1) < 80)
         {
                 command("say 我武當派最注重內功心法" + RANK_D->query_respect(ob)+
-                        "是否應該在武當心法上多下點功夫啊?");
+                        "是否應該在氤氳紫氣上多下點功夫啊?  （需要氤氳紫氣80級）");
                 return;
         }
         if ((int)ob->query_skill("taoism", 1) < 80)
         {
                 command("say 習武是為了強身健體，一味的練武是不可取的。");
                 command("say 我看你還需要在修身養性方面多鍛煉鍛煉，以提高"
-                        "你的道德心法。");
+                        "你的道德心法。  （需要道學心法80級）");
                 return;
         }
         command("say 好吧，我就收下你了。");
-        command("say 希望你能全心修鍊道家心法，領悟道家真髓！");
+        command("say 希望你能全心修練道家心法，領悟道家真髓！");
         command("recruit "+query("id", ob));
         if( query("class", ob) != "taoist" )
                 set("class", "taoist", ob);
@@ -149,10 +149,10 @@ mixed ask_book1()
                 return "你又不是我武當派的傳人，這話是什麼意思？";
 
         if( query("shen", me)<10000 )
-                return "你俠義正事做得不夠，這本書我還不能給你。";
+                return "你俠義正事做得不夠，這本書我還不能給你。  （需要10000點正氣）";
 
         if ((int)me->query_skill("wudang-yaoli", 1) < 50)
-                return "你對武當藥理的了解太淺，還是過段時間再說吧。";
+                return "你對武當藥理的了解太淺，還是過段時間再說吧。  （需要武當藥理50級）";
 
         ob = find_object(WUDANG);
         if (! ob) ob = load_object(WUDANG);
@@ -221,13 +221,13 @@ mixed ask_skill()
                 return RANK_D->query_respect(me) + "不是我們武當派的人，何出此言？";
 
         if( query("shen", me)<140000 )
-                return "你行俠仗義的事情做的還很不夠，我不能傳你絕招！";
+                return "你行俠仗義的事情做的還很不夠，我不能傳你絕招！  （需要140000點正氣）";
 
         if (me->query_skill("shenmen-jian", 1) < 160)
-                return "你的神門十三劍還不到家，要多練練！";
+                return "你的神門十三劍還不到家，要多練練！  （需要神門十三劍160級）";
 
         if( query("family/gongji", me)<200 )
-                return "你為我武當派效力還不夠，這招我先不忙傳你。";
+                return "你為我武當派效力還不夠，這招我先不忙傳你。  （需要200點門派貢獻）";
 
         message_vision(HIY "$n" HIY "點了點頭，在$N" HIY
                        HIY "耳邊輕聲嘀咕了幾句，又拔出"

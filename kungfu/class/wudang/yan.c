@@ -103,7 +103,7 @@ void greeting(object ob)
                 set("qi", 1, ob);
                 message_vision(HIR "只見真武劍陣頓時啟動，高台上劍氣縱橫，把$N"
                                HIR "圍在中央。十三\n個五行八卦弟子的十三口長劍"
-                               "齊出，瞬間在$N" HIR "身上划出了十三道\n口子，"
+                               "齊出，瞬間在$N" HIR "身上劃出了十三道\n口子，"
                                "頓時鮮血淋漓。\n\n" NOR, ob);
 
                 say(CYN "俞岱岩臉現怒容，喝道：邪魔外道，也敢闖真武劍陣！\n");
@@ -124,21 +124,21 @@ void attempt_apprentice(object me)
         if ((int)me->query_skill("yinyun-ziqi", 1) < 30) {
                 command("say 我武當派乃內家武功，最重視內功心法。");
                 command("say " + RANK_D->query_respect(me) +
-                        "是否還應該在太極神功上多下點功夫？");
+                        "是否還應該在氤氳紫氣上多下點功夫？  （需要氤氳紫氣70級）");
                 return;
         }
 
         if( query("shen", me)<10000){
                 command("say 我武當乃是堂堂名門正派，對弟子要求極嚴。");
                 command("say 在德行方面，" + RANK_D->query_respect(me) +
-                        "是否還做得不夠？");
+                        "是否還做得不夠？  （需要10000點正氣）");
                 return;
         }
 
         if ((int)me->query_skill("yinyun-ziqi", 1) < 70)
         {
                 command("say 我武當派最注重內功心法" + RANK_D->query_respect(me)+
-                        "是否應該在武當心法上多下點功夫啊?");
+                        "是否應該在氤氳紫氣上多下點功夫啊?  （需要氤氳紫氣70級）");
                 return;
         }
 
@@ -146,7 +146,7 @@ void attempt_apprentice(object me)
         {
                 command("say 習武是為了強身健體，一味的練武是不可取的！");
                 command("say 我看你還需要在修身養性方面多鍛煉鍛煉，以提"
-                        "高你的道德心法。");
+                        "高你的道德心法。  （需要道學心法70級）");
                 return;
         }
 

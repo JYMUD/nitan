@@ -12,9 +12,9 @@ inherit NPC;
 void create()
 {
         set_name("凌虛道長", ({ "lingxu daozhang", "lingxu", "daozhang" }));
-        set("long","他就是武當的制香道長，殷梨亭的弟子。每天來武當燒香的人太多了，他和\n他手下的幾個伐木道士都忙不過來了。\n");
+        set("long","他就是武當的製香道長，殷梨亭的弟子。每天來武當燒香的人太多了，他和\n他手下的幾個伐木道士都忙不過來了。\n");
         set("gender", "男性");
-        set("nickname", "制香道長");
+        set("nickname", "製香道長");
         set("age", 30);
         set("attitude", "peaceful");
         set("shen_type", 1);

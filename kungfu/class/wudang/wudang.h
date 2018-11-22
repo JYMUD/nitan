@@ -10,7 +10,7 @@ int permit_recruit(object ob)
 
         if( query("betrayer/times", ob) )
         {
-                command("say 我們武當派乃名門正派，決不收判師之徒！");
+                command("say 我們武當派乃名門正派，決不收叛師之徒！");
                 return 0;
         }
 

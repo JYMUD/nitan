@@ -106,14 +106,14 @@ void attempt_apprentice(object ob)
         {
                 command("say 我武當乃是堂堂名門正派，對弟子要求極嚴。");
                 command("say 在德行方面，" + RANK_D->query_respect(ob) +
-                        "是否還做得不夠？");
+                        "是否還做得不夠？  （需要15000點正氣）");
                 return;
         }
 
         if ((int)ob->query_skill("yinyun-ziqi",1) < 80)
         {
                 command("say 我武當派最注重內功心法" + RANK_D->query_respect(ob)+
-                        "是否應該在武當心法上多下點功夫啊?");
+                        "是否應該在氤氳紫氣上多下點功夫啊?  （需要氤氳紫氣80級）");
                 return;
         }
 
@@ -121,7 +121,7 @@ void attempt_apprentice(object ob)
         {
                 command("say 習武是為了強身健體，一味的練武是不可取的。");
                 command("say 我看你還需要在修身養性方面多鍛煉鍛煉，以提高"
-                        "你的道德心法。");
+                        "你的道德心法。  （需要道學心法80級）");
                 return;
         }
 
@@ -147,16 +147,16 @@ mixed ask_me()
                 return "你連虎爪絕戶手都沒學，還談什麼絕招可言？";
 
         if( query("family/gongji", me)<400 )
-                return "你為我武當派效力還不夠，這招我先不忙傳你。";
+                return "你為我武當派效力還不夠，這招我先不忙傳你。  （需要400點門派貢獻）";
 
         if( query("shen", me)<100000 )
-                return "這一招太過陰恨，如果被你用去我恐怕不放心！";
+                return "這一招太過陰恨，如果被你用去我恐怕不放心！  （需要100000點正氣）";
 
         if (me->query_skill("force") < 180)
-                return "你的內功的修為不夠，練高了再來吧。";
+                return "你的內功的修為不夠，練高了再來吧。  （需要內功有效等級180級）";
 
         if (me->query_skill("huzhua-shou", 1) < 120)
-                return "你的虎爪絕戶手還不到家，還是自己先下去多多練習吧。";
+                return "你的虎爪絕戶手還不到家，還是自己先下去多多練習吧。  （需要虎爪絕戶手120級）";
 
         message_vision(HIY "$n" HIY "嘆了口氣，在$N" HIY "耳邊輕"
                        "聲說了幾句虎爪絕戶手\n的精要，隔了良久，"
