@@ -141,10 +141,10 @@ string ask_job()
 
         me = this_player();
         if( query_temp("job/peiyao", me) )
-                return "讓你乾的活你幹完了么？";
+                return "讓你幹的活你幹完了麼？";
 
         if( query("combat_exp", me)>30000 )
-                return "讓你干這活，也太屈就你了吧。";
+                return "讓你幹這活，也太屈就你了吧。";
 
         if( query("combat_exp", me)<3000 )
                 return "就這點經驗，連一百五都沒有，我看你來葯臼都端不起來！";
@@ -362,14 +362,14 @@ int do_join(string arg)
 
         if( query("is_alchemy", me) )
                 return notify_fail(CYN "平一指皺了皺眉，說道：你不是已經加"
-                                   "入煉藥師協會了么？\n" NOR);
+                                   "入煉藥師協會了麼？\n" NOR);
 
         if( query("bad_alchemy", me) )
                 return notify_fail(CYN "平一指冷笑一聲，說道：既然你已經脫"
                                    "離了煉藥師協會，又回來作甚？\n" NOR);
 
         tell_object(me, CYN "\n平一指點了點頭，說道：你真的打算(" HIY "dec"
-                        "ide" NOR + CYN ")加入煉藥師協會么？可考慮清楚了？"
+                        "ide" NOR + CYN ")加入煉藥師協會麼？可考慮清楚了？"
                         "\n" NOR);
         set_temp("want_join", 1, me);
         return 1;
@@ -381,14 +381,14 @@ int do_unjoin(string arg)
 
         if (! arg || arg != "煉藥師協會")
                 return notify_fail(CYN "平一指皺了皺眉，說道：你打算脫離什"
-                                   "么？說話不清不楚的。\n" NOR);
+                                   "麼？說話不清不楚的。\n" NOR);
 
         if( !query("is_alchemy", me) )
                 return notify_fail(CYN "平一指冷笑一聲，沒理你。\n" NOR);
 
         tell_object(me, CYN "\n平一指嘆了口氣，說道：如果脫離煉藥師協會，以後"
                         "可不能反悔。你真打算(" HIY "decide" NOR + CYN ")"
-                        "這麼做么？\n" NOR);
+                        "這麼做麼？\n" NOR);
         set_temp("want_tuoli", 1, me);
         return 1;
 }
@@ -403,7 +403,7 @@ int do_decide()
         if( query_temp("want_join", me) )
         {
                 message_vision(HIC "$N" HIC "對着$n" HIC "微笑道：煉藥師"
-                               "可是最榮耀的職業，以後好好乾吧。\n" NOR,
+                               "可是最榮耀的職業，以後好好幹吧。\n" NOR,
                                this_object(), me);
 
                 level = me->query_skillo("liandan-shu", 1);
