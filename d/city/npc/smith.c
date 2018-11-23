@@ -86,7 +86,7 @@ mixed ask_back()
         me = this_player();
         if( query("family/family_name", me) != "血刀門" )
         {
-                message_vision("$N自顧自的幹活，好象沒有聽見$n在說什麼。\n",
+                message_vision("$N自顧自的幹活，好像沒有聽見$n在說什麼。\n",
                                this_object(), me);
                 return -1;
         }

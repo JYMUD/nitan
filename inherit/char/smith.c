@@ -53,7 +53,7 @@ string ask_me()
         object me = this_player();
 
         if (query("combat_exp", me) > 50000)
-                return "讓您老乾這個未免屈尊了吧？";
+                return "讓您老幹這個未免屈尊了吧？";
 
         if (query("qi", me) < 50)
                 return "你還是歇會兒吧！要是出了人命我可承擔不起。";

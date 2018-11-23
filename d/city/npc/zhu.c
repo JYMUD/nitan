@@ -15,7 +15,7 @@ void create()
 {
         set_name("朱熹", ({ "zhu xi", "zhu" }));
         set("long", "朱先生被稱為當世第一大文學家，肚子"
-                    "里的墨水比海還要深。\n");
+                    "裡的墨水比海還要深。\n");
         set("gender", "男性");
         set("age", 65);
         set("no_get", 1);
@@ -113,7 +113,7 @@ string ask_job()
                 return "我看你臉色不行啊，先歇會兒吧，我可不想抄書抄出人命來。";
 
         if( query("jing", me)<10 )
-                return "我看你精神不行啊，能抄得了書么？";
+                return "我看你精神不行啊，能抄得了書麼？";
 
         if (me->query_int() < 25 && me->query_skill("literate", 1) < 20)
                 return "我說你腦子這麼笨！也來抄書？";
@@ -250,7 +250,7 @@ int working(object me)
 int halt_working(object me)
 {
         message_vision("$N把手中的筆墨紙硯丟到一旁，牢騷道："
-                       "什麼呀，根本就不是人乾的活！\n", me);
+                       "什麼呀，根本就不是人幹的活！\n", me);
         delete_temp("job/copy", me);
         delete_temp("job/step", me);
         return 1;

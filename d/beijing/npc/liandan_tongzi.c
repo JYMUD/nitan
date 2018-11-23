@@ -51,7 +51,7 @@ mixed ask_caiyao()
                 return "叫你去採藥，還呆在這幹嘛！";
 
         case 2:
-                return "葯采來了？還不快給我！";
+                return "藥採來了？還不快給我！";
         }
 
         switch(query_temp("liandan", me) )
