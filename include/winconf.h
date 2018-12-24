@@ -3,7 +3,7 @@
 #undef REFUSE_NEW_PLAYER
 
 //多少天后清除未上線的未交費用戶
-#define UNLOG_IDLE      90
+#define UNLOG_IDLE      180
 
 //是否使用MYSQL數據庫及是否存儲用戶數據到MYSQL庫里，不使用數據庫則#undef DB_SAVE！
 #undef DB_SAVE

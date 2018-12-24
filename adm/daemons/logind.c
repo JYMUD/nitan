@@ -10,7 +10,7 @@
 #include <mudlib.h>
 
 #define WAITING_ENTER_TIME      3
-#define MULTI_LOGIN             30
+#define MULTI_LOGIN             2
 #define PUBLIC_IP               "127.0.0.1"
 
 #define MUDLIST_CMD             "/cmds/usr/mudlist"
@@ -229,17 +229,9 @@ void logon(object ob)
                 input_to("get_version", ob);
         }
 
-        if( !query_temp("big5", ob)){
-                write(HIC "ヘ才棟虜砰叫塊GB/BIG5э跑才棟┪鋇魁ノめ\n" NOR
-                      "目前的字符集是簡體，請輸入GB/BIG5改變字符集，或直接登錄用戶。\n"
-                      "請輸入您的英文名字(" CYN "忘記密碼請輸入「pass」" NOR ")：\n");
-        } else {
-                delete_temp("big5", ob);
-                write(HIC "目前的字符集是繁體，請輸入GB/BIG5改變字符集，或直接登錄用戶。\n" NOR);
-                set_temp("big5", 1, ob);
-                write("目前的字符集是繁體，請輸入GB/BIG5改變字符集，或直接登錄用戶。\n");
-                write("請輸入您的英文名字(" CYN "忘記密碼請輸入「pass」" NOR ")：\n");
-        }
+        write(HIC "Please use MUSHclient and enable \"UTF-8 (Unicode)\" to login.\n" NOR);
+        write("請輸入您的英文名字(" CYN "忘記密碼請輸入「pass」" NOR ")：\n");
+
         input_to( (: get_id :), ob );
 }
 

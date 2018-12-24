@@ -3,7 +3,7 @@
 #endif
 
 //多少天后清除未上線的未交費用戶
-#define UNLOG_IDLE      90
+#define UNLOG_IDLE      180
 
 //支持網絡傳輸壓縮功能
 #define MCCP_SUPPORT    1
